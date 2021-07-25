@@ -1,0 +1,16 @@
+
+:root {
+    --azul :#25c4c7;
+    --negro: #303030;
+    --gris: #6b6b6b:
+} 
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    color: var(--negro);
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    color: var(--negro);
+}
