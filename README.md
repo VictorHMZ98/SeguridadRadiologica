@@ -10,7 +10,7 @@ Tareas a realizar:
   - Nombre
   - Título
   - Breve descripción de nosotros
- - [X] Utiliza al menos 1 animación o efecto usando CSS / JS
+ - [x] Utiliza al menos 1 animación o efecto usando CSS / JS
  - [ ] Los desarrolladores no dan ninguna advertencia sobre los errores de uso de HTML.
  - [ ] Considera los fundamentos de UX y UI
 
