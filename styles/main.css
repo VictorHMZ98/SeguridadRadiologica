@@ -30,6 +30,7 @@ h3{
     animation-duration: 3s;
     animation-iteration-count: 1;
     text-align: center;
+
 }
 
 h4{
@@ -46,7 +47,11 @@ p{
     margin: 20px;
 }
 
-.barra-azul{
+.navbar-body-background{
+    background-color: white;
+}
+
+.nav-blue-bar{
     background-color: var(--azul);
     width: 100vw;
     height: 85px;
@@ -62,7 +67,7 @@ width:70%;
 
 }
 
-.txt-azul{
+.container-text-blue{
     font-family: "Open sans";
     font-size: 25px;
     color: var(--azul);
@@ -70,7 +75,7 @@ width:70%;
     text-align: center;
     margin: 10px;
 }
-.txt-bio{
+.container-text-p{
     text-align: center;
 }
 
@@ -79,14 +84,20 @@ width:70%;
     margin: auto;
 }
 
-.square-img{
-/*object-fit: none;*/
+.container-img-square{
     width: 36vw;
     height: 380px;
     object-fit: cover;
+
+}
+.container-img-bios{
+    width: 100%;
+    object-fit: cover;
+    height: 50vw;
 }
 
-.txt-nav{
+
+.navbar-link-text{
     font-family: "Open sans";
     font-weight: 700;
     color: var(--negro);
@@ -98,6 +109,16 @@ width:70%;
     color: var(--azul);
 }
 
-.img-icon{
+.navbar-img-icon{
     width: 20px;
+}
+
+
+@keyframes slideIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
