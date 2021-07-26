@@ -1,4 +1,3 @@
-
 :root {
     --azul :#25c4c7;
     --negro: #303030;
@@ -8,9 +7,118 @@
 h1{
     font-family: 'Raleway', sans-serif;
     color: var(--negro);
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 100px;
+
 }
 
+h2{
+    font-family: "Raleway";
+    font-size: 45px;
+    color: var(--azul);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3{
+    font-family: "Open sans";
+    font-size: 18px;
+    padding: 0;
+    animation-name: slideIn;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    text-align: center;
+
+}
+
+h4{
+    font-family: "Raleway";
+    font-size: 25px;
+    color: var(--negro);
+    text-align: center;
+    text-transform: uppercase; 
+    margin: 30px;
+}
 p{
     font-family: 'Open Sans', sans-serif;
     color: var(--negro);
+    margin: 20px;
+}
+
+.navbar-body-background{
+    background-color: white;
+}
+
+.nav-blue-bar{
+    background-color: var(--azul);
+    width: 100vw;
+    height: 85px;
+}
+
+.container-bios{
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+.container-bios-img{
+width:70%;
+
+}
+
+.container-text-blue{
+    font-family: "Open sans";
+    font-size: 25px;
+    color: var(--azul);
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px;
+}
+.container-text-p{
+    text-align: center;
+}
+
+.div-centered{
+    justify-content: center;
+    margin: auto;
+}
+
+.container-img-square{
+    width: 36vw;
+    height: 380px;
+    object-fit: cover;
+
+}
+.container-img-bios{
+    width: 100%;
+    object-fit: cover;
+    height: 50vw;
+}
+
+
+.navbar-link-text{
+    font-family: "Open sans";
+    font-weight: 700;
+    color: var(--negro);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.txt-azul :active{
+    color: var(--azul);
+}
+
+.navbar-img-icon{
+    width: 20px;
+}
+
+
+@keyframes slideIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
