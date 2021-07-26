@@ -1,7 +1,7 @@
 :root {
     --azul :#25c4c7;
     --negro: #303030;
-    --gris: #6b6b6b:
+    --gris: #b6b6b6; 
 } 
 
 h1{
@@ -51,6 +51,9 @@ p{
     background-color: white;
 }
 
+.footer-background-black{
+background-color: var(--negro);
+}
 .nav-blue-bar{
     background-color: var(--azul);
     width: 100vw;
@@ -111,6 +114,31 @@ width:70%;
 
 .navbar-img-icon{
     width: 20px;
+}
+
+.footer-link-txt{
+    color:white;
+
+}
+
+.footer-title-txt{
+    color:white;
+    font-weight: 700;
+    text-decoration: underline var(--azul) solid 3px;
+    text-underline-offset: 5px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-link-copyright{
+    color: var(--gris);
+    margin-top: 15px;
+}
+
+.footer-img-icon{
+    width: 20px;
+    padding: 2px;
+    margin-right: 5px;
 }
 
 
