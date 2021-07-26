@@ -27,9 +27,24 @@
 .textoEmpresa{
     font-family: "Open sans";
     font-size: 18px;
+    padding: 0;
+    animation-name: slideIn;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
 }
+
+@keyframes slideIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .imgMision{
     width: 36vw;
+    height: 380px;
 }
 .tituloMision{
     font-family: "Raleway";
@@ -43,6 +58,7 @@
 }
 .imgVision{
     width: 36vw;
+    height: 380px;
 }
 .tituloVision{
     font-family: "Raleway";
