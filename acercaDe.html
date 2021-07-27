@@ -23,39 +23,50 @@
 <body>
 
     <!--Nav bar -->
-    <div class="container-fluid">
-        <div class="nav-blue-bar">
-            <nav class="navbar navbar-light navbar-body-background">
+    <div class="container-fluid" style="padding:0%">
+        <div class="nav-blue-bar" >
+            <!-- <nav class="navbar navbar-light navbar-body-background"> -->
+            <nav class="navbar navbar-expand-lg navbar-light navbar-body-background">
                 <a class="navbar-brand" href="#">
                     <!-- Inserto el logo de la empresa-->
                     <img src="./img/logo/logo-horizontal.svg" width="200" height="50" class="d-inline-block align-top"
                         alt="">
                 </a>
+               
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"><!--Button responsivo hamburger-->
+                    <span class="navbar-toggler-icon"></span>
+                  </button><!--Button responsivo hamburger-->
 
-                <ul class="navbar-nav d-flex flex-row  nav-ba">
-                    <li class="nav-item mr-5">
-                        <a class="nav-link navbar-link-text" href="#">Nosotros</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link navbar-link-text" href="#">Productos</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link navbar-link-text" href="#">Servicios</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link navbar-link-text" href="#">Contacto</a>
-                    </li>
-                    <li class="nav-item mr-5 navbar-link-text">
-                        <a class="nav-link" href="#">
-                            <img src="./img/icons/icons-user.svg" class="navbar-img-icon">
-                        </a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="#">
-                            <img src="./img/icons/icons-shopping-cart.svg" class="navbar-img-icon">
-                        </a>
-                    </li>
-                </ul><!-- Termina el ul de los links-->
+                  
+                  <div class="collapse navbar-collapse" id="navbarTogglerDemo02"><!--menú hamburgesa-->
+                    <ul class="navbar-nav d-flex flex-row  nav-ba">
+                        <li class="nav-item mr-5">
+                            <a class="nav-link navbar-link-text collapse navbar-collapse" href="#">Nosotros</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a class="nav-link navbar-link-text" href="#">Productos</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a class="nav-link navbar-link-text" href="#">Servicios</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a class="nav-link navbar-link-text" href="#">Contacto</a>
+                        </li>
+                        <li class="nav-item mr-5 navbar-link-text">
+                            <a class="nav-link" href="#">
+                                <img src="./img/icons/icons-user.svg" class="navbar-img-icon">
+                            </a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a class="nav-link" href="#">
+                                <img src="./img/icons/icons-shopping-cart.svg" class="navbar-img-icon">
+                            </a>
+                        </li>
+                    </ul><!-- Termina el ul de los links-->
+                  </div><!--menú hamburgesa-->
+                
+
+
             </nav>
         </div> <!-- Termina el navbar principal -->
     </div> <!-- Termina el container fluid, hora de alinear todo-->
