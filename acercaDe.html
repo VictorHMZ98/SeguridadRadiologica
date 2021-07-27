@@ -23,39 +23,50 @@
 <body>
 
     <!--Nav bar -->
-    <div class="container-fluid">
-        <div class="nav-blue-bar">
-            <nav class="navbar navbar-light navbar-body-background">
+    <div class="container-fluid" style="padding:0%">
+        <div class="nav-blue-bar" >
+            <!-- <nav class="navbar navbar-light navbar-body-background"> -->
+            <nav class="navbar navbar-expand-lg navbar-light navbar-body-background">
                 <a class="navbar-brand" href="#">
                     <!-- Inserto el logo de la empresa-->
                     <img src="./img/logo/logo-horizontal.svg" width="200" height="50" class="d-inline-block align-top"
                         alt="">
                 </a>
+               
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"><!--Button responsivo hamburger-->
+                    <span class="navbar-toggler-icon"></span>
+                  </button><!--Button responsivo hamburger-->
 
-                <ul class="navbar-nav d-flex flex-row  nav-ba">
-                    <li class="nav-item mr-5">
-                        <a class="nav-link navbar-link-text" href="#">Nosotros</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link navbar-link-text" href="#">Productos</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link navbar-link-text" href="#">Servicios</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link navbar-link-text" href="#">Contacto</a>
-                    </li>
-                    <li class="nav-item mr-5 navbar-link-text">
-                        <a class="nav-link" href="#">
-                            <img src="./img/icons/icons-user.svg" class="navbar-img-icon">
-                        </a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="#">
-                            <img src="./img/icons/icons-shopping-cart.svg" class="navbar-img-icon">
-                        </a>
-                    </li>
-                </ul><!-- Termina el ul de los links-->
+                  
+                  <div class="collapse navbar-collapse" id="navbarTogglerDemo02"><!--menú hamburgesa-->
+                    <ul class="navbar-nav d-block ml-auto nav-ba">
+                        <li class="nav-item mr-5">
+                            <a class="nav-link navbar-link-text collapse navbar-collapse" href="#">Nosotros</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a class="nav-link navbar-link-text" href="#">Productos</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a class="nav-link navbar-link-text" href="#">Servicios</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a class="nav-link navbar-link-text" href="#">Contacto</a>
+                        </li>
+                        <li class="nav-item mr-5 navbar-link-text">
+                            <a class="nav-link" href="#">
+                                <img src="./img/icons/icons-user.svg" class="navbar-img-icon">
+                            </a>
+                        </li>
+                        <li class="nav-item mr-5 navbar-link-text">
+                            <a class="nav-link" href="#">
+                                <img src="./img/icons/icons-shopping-cart.svg" class="navbar-img-icon">
+                            </a>
+                        </li>
+                    </ul><!-- Termina el ul de los links-->
+                  </div><!--menú hamburgesa-->
+                
+
+
             </nav>
         </div> <!-- Termina el navbar principal -->
     </div> <!-- Termina el container fluid, hora de alinear todo-->
@@ -65,6 +76,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-lg-12 col-12">
+
                 <h1>ACERCA DE NOSOTROS</h1>
             </div>
         </div>
@@ -200,41 +212,51 @@
         </div> <!-- Fin de container-bios-txt -->
         <!-- fin biografía 3-->
 
-        <!-- Biografía 4-->
-        <div class="row mt-5 container-bios">
+         <!-- Biografía 4-->
+         <div class="row mt-5 container-bios">
             <!-- container-bios-txt -->
-            <div class="col-lg-7 col-12 div-centered">
-                <h4>Víctor Hugo Martínez Zamora</h4>
+
+           <div class="col-lg-7 col-12 div-centered">
+                <h4>Erick Sánchez</h4>
+
                 <div class="container-text-blue">Fullstack Developer</div>
-                <p class="container-text-p"> 23 años . Originario de San Martin de las Piramides, Estado de México. Interesado en la programación y el desarrollo desde hace 6 años. Actualmente en busca de desarrollar una carrera profesional dentro del desarrollo Java. Con buena comunicación, atento a los errores  y a la solución de estos.
+                <p class="container-text-p"> Tengo 23 años, soy de la CDMX, me llama la atención todo lo complejo y poco común,
+                    mi rama favorita de la tecnología es la ciencia de datos, mi mayor motivación es generar 
+                    ideas que puedan generar un cambio en la sociedad y el mundo acompañado de mi mejor cualidad 
+                    que es siempre ser optimista y positivo ante cualquier problema que se presente.
+
                 </p>
             </div>
             <!-- Fin de container-bios-txt -->
             <!-- "container-bios-img"-->
-            <div class="col-12 col-lg-5">
-                <img src="./img/bio/img-bio-victor.jpeg" class="container-img-bios">
+
+                 <div class="col-12 col-lg-5">
+                <img src="./img/bio/img-bio-erick.jpg" class="container-img-bios">
+
             </div>
             <!-- Fin container-bios-img-->
         </div>
         <!-- fin biografía 4-->
-
+        
         <!-- Biografía 5-->
         <!-- "container-bios-img"-->
         <div class="row mt-5 container-bios">
+
             <div class="col-12 col-lg-5">
-                <img src="./img/bio/img-bio-carlos.jpg" class="container-img-bios">
+                <img src="./img/bio/img-bio-victor.jpeg" class="container-img-bios">
+
             </div>
             <!-- Fin container-bios-img-->
 
             <!-- container-bios-txt -->
+
             <div class="col-lg-7 col-12 div-centered">
-                <h4>Carlos Pérez </h4>
-                <div class="container-text-blue"> Fullstack Developer </div>
-                <p class="container-text-p"> ¡Hola a todos! Lorem Ipsum is simply dummy text of the printing
-                    and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-                    the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book. It has survived not only five centuries, but also the leap into electronic
-                    typesetting, remaining essentially unchanged.</p>
+                <h4>Víctor Hugo Martínez Zamora</h4>
+                <div class="container-text-blue">Fullstack Developer</div>
+                <p class="container-text-p"> ¡Hola! Tengo 23 años y soy originario de San Martin de las Piramides, Estado de México. 
+                    He estado interesado en la programación y el desarrollo web desde hace 6 años. Actualmente quiero trabajar 
+                    dentro del desarrollo Java. Con buena comunicación, atento a los errores  y a la 
+                    solución de estos podré desempeñarme satisfactoriamente en el entorno de trabajo.
             </div>
         </div> <!-- Fin de container-bios-txt -->
         <!-- fin biografía 5-->
