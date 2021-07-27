@@ -142,6 +142,19 @@ width:70%;
 }
 
 
+
+.btn{
+    background-color: #25c4c7;
+    border: #25c4c7;
+    
+}
+
+
+.btn:hover{
+    background-color: #8ae6e7;
+}
+
+
 @keyframes slideIn{
     from {
         opacity: 0;
