@@ -73,22 +73,38 @@
 
         <!--Form -->
         <div class="div-centered col-6">
-            <form>
+            <form class="needs-validation" novalidate> <!--class y novalidate necesarios para los colores de validación-->
                 <div class="form-group" >
+
                   <label for="name">Nombre:</label>
-                  <input type="email" class="form-control" id="name">
+                  <input type="text" name="name" class="form-control" id="name" maxlength="40" required/><!--required para validación-->
+
+                  <div class="invalid-feedback"><!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
+                    Nombre es requerido
+                  </div>
+
                 </div>
                 <div class="form-group">
                     <label for="email">Correo electrónico:</label>
-                    <input type="email" class="form-control" id="email">
+                    <input type="email" name="email" class="form-control" id="email" maxlength="40" required/>
+
+                    <div class="invalid-feedback">
+                        e-mail válido es requerido
+                      </div>
+
                 </div>
                   <div class="form-group">
                     <label for="phone">Teléfono:</label>
-                    <input type="number" class="form-control" id="phone">
+                    <input type="number" name="phone" class="form-control" id="phone" maxlength="12" required/>
+
+                    <div class="invalid-feedback">
+                        Número de teléfono válido es requerido
+                      </div>
+
                 </div>
                 <div class="form-group">
                   <label for="notas">Notas (opcional)</label>
-                  <textarea class="form-control" id="notas" rows="3" placeholder="Escribe aquí los productos o servicios que quieras cotizar"></textarea>
+                  <textarea class="form-control" name="notas" id="notas" rows="3" placeholder="Escribe aquí los productos o servicios que quieras cotizar" maxlength="280"></textarea>
                 </div>
                 <div class="text-center">
                 <button type="submit" class="btn btn-primary">Enviar</button>
@@ -97,7 +113,7 @@
         </div> <!--Form-->
         </div>
         <br/> <br/> <br/> <br/>
-        
+
 
         
     <div class="container-fluid footer footer-background-black">
@@ -123,7 +139,7 @@
             </div>
 
             <div class="col-4 footer-contacto">
-                <div class="row footer-title-txt">CONTÁCTO</div>
+                <div class="row footer-title-txt">CONTACTO</div>
                 <div class="footer-link-txt">
                     <div class="row "> <a href="#"><img src="./img/icons/icons-mail.svg" class="footer-img-icon"></a>
                         radiomed.contacto@gmail.com</div>
