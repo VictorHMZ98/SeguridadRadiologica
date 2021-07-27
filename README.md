@@ -11,7 +11,7 @@ Tareas a realizar:
   - Título
   - Breve descripción de nosotros
  - [x] Utiliza al menos 1 animación o efecto usando CSS / JS
- - [ ] Los desarrolladores no dan ninguna advertencia sobre los errores de uso de HTML.
- - [ ] Considera los fundamentos de UX y UI
+ - [x] Los desarrolladores no dan ninguna advertencia sobre los errores de uso de HTML.
+ - [x] Considera los fundamentos de UX y UI
 
 Esta cheatsheet podría ser útil [Bootstrap Cheatsheet](https://hackerthemes.com/bootstrap-cheatsheet/)
