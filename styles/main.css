@@ -204,4 +204,21 @@ h1{
 .container-fullvw{
     margin: 0 auto;
 }
+@media (max-width: 992px) {
+    .nav-ba{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-left: 0;
+    }
+    .navbar-link-text{
+        background-color: white;
+        z-index: 8;
+    }
+    #navbarTogglerDemo02{
+        background-color: white;
+        z-index: 8;
+    }
+}
 }
