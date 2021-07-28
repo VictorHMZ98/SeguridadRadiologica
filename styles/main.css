@@ -184,7 +184,7 @@ p{
     flex-direction: column;
 
 }
-
+}
 /* .footer-link-txt{
     
     visibility: collapse;
@@ -204,4 +204,25 @@ p{
 .container-fullvw{
     margin: 30px 0px 10px 0px;
 }
+@media (max-width: 992px) {
+
+    .nav-ba{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-left: 0;
+    }
+    .navbar-link-text{
+        background-color: white;
+        z-index: 8;
+    }
+    #navbarTogglerDemo02{
+        background-color: white;
+        z-index: 8;
+    }
+    .nav-item{
+        background-color: white!important;
+        z-index: 8!important;
+    }
 }
