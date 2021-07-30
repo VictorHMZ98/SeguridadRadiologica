@@ -40,11 +40,7 @@ h4{
     text-transform: uppercase; 
     margin: 30px;
 }
-p{
-    font-family: 'Open Sans', sans-serif;
-    color: var(--negro);
-    margin: 20px;
-}
+
 
 .navbar-body-background{
     background-color: white;
@@ -94,8 +90,10 @@ p{
 
 .container-text-p{
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--negro);
+    margin: 20px;
 }
-
 
 .div-centered{
     justify-content: center;
@@ -116,18 +114,6 @@ p{
 
 .container-fullvw{
     margin-top: 200px;
-}
-
-
-.btn{
-    background-color: #25c4c7;
-    border: #25c4c7;
-    
-}
-
-
-.btn:hover{
-    background-color: #8ae6e7;
 }
 
 
@@ -159,7 +145,6 @@ p{
     padding: 2px;
     margin-right: 5px;
 }
-
 
 @keyframes slideIn{
     from {
