@@ -88,14 +88,14 @@
 
         <!--Form -->
         <div class="div-centered col-6">
-            <form class="needs-validation" enctype="text/plain" action="mailto:generation.c2.cdmxe3@gmail.com?subject=Contacto" method="POST" novalidate> <!--class y novalidate necesarios para los colores de validación-->
+            <form id="needs-validation" novalidate> <!--class y novalidate necesarios para los colores de validación-->
                 <div class="form-group" >
 
-                  <label for="name">Nombre:</label>
+                  <label for="validationCustom01">Nombre:</label>
                   <input type="text" name="name" class="form-control" id="name" maxlength="40" required/><!--required para validación-->
 
                   <div class="invalid-feedback"><!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
-                    Nombre es requerido
+                    Nombre válido es requerido
                   </div>
 
                 </div>
@@ -110,7 +110,7 @@
                 </div>
                   <div class="form-group">
                     <label for="phone">Teléfono:</label>
-                    <input type="tel" name="phone" class="form-control" id="phone" maxlength="12" required/>
+                    <input type="number" name="phone" class="form-control" id="phone" maxlength="12" required/>
 
                     <div class="invalid-feedback">
                         Número de teléfono válido es requerido
