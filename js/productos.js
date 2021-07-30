@@ -187,6 +187,7 @@ function anadirProducto(productos){
 } //Fin del anadirProducto
 anadirProducto(pruebaJson);
 
+
 /*
         <!-- Empieza container producto --> 
         <div class="container col-md-3 col-lg-3 col-xl-3 mx-auto mb-6"> 
@@ -213,3 +214,22 @@ anadirProducto(pruebaJson);
             </div><!--card--> 
         </div><!--container producto--> 
 */
+
+
+// Función boton pop up
+window.onload = function () {
+    
+    const btnAdd = document.getElementById('btn-add-car');
+
+    btnAdd.addEventListener('click', function(){
+        new Swal({
+            icon: 'success',
+            title: 'AGREGADO AL CARRITO',
+            showConfirmButton: false,
+            timer: 1500,
+            position: 'center',
+          })
+    
+    })//addEventListener 
+}// window.onload
+

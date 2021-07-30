@@ -116,6 +116,9 @@ h4{
     margin-top: 200px;
 }
 
+.card{
+    border: none;
+}
 
 .footer-background-black{
     background-color: var(--negro);
