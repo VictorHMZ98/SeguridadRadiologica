@@ -3,12 +3,6 @@
 * Released under the MIT License.
 */
 
-:root {
-  --azul :#25c4c7;
-  --negro: #303030;
-  --gris: #b6b6b6; 
-} 
-
 .swal2-popup.swal2-toast {
   box-sizing: border-box;
   grid-column: 1/4 !important;
@@ -28,6 +22,8 @@
   padding: 0;
   font-size: 1em;
   text-align: initial;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
 }
 .swal2-popup.swal2-toast .swal2-loading {
   justify-content: center;
@@ -299,6 +295,8 @@
   text-align: center;
   text-transform: none;
   word-wrap: break-word;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
 }
 
 .swal2-actions {
@@ -351,7 +349,7 @@
   border: 0;
   border-radius: 4px;
   background: initial;
-  background-color: var(--azul);
+  background-color: #25c4c7;
   color: white;
   font-size: 1rem;
 }
