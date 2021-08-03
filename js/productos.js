@@ -171,9 +171,8 @@ function anadirProducto(productos){
                     </ul> 
                 </p>   
                 <div class="button text-center">      
-                    <a href="#" class="btn btn-info text-center">Comprar</a>   
+                  <button class="btn btn-info" id="btn-add-car">Comprar</button>   
                 </div>   
-         
             </div> <!--card-body--> 
         </div><!--card--> 
         </div>`
@@ -214,11 +213,7 @@ anadirProducto(pruebaJson);
             </div><!--card--> 
         </div><!--container producto--> 
 */
-
-
 // Función boton pop up
-window.onload = function () {
-    
     const btnAdd = document.getElementById('btn-add-car');
 
     btnAdd.addEventListener('click', function(){
@@ -229,7 +224,5 @@ window.onload = function () {
             timer: 1500,
             position: 'center',
           })
-    
     })//addEventListener 
-}// window.onload
 
