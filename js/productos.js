@@ -7,8 +7,8 @@ let pruebaJson = [
       "precio": "121 USD",
       "li1": "0.5mm de plomo",
       "li2": "66x95cm",
-      "li3": "con bolsillo",
-      "li4": "acabado textil",
+      "li3": "Con bolsillo",
+      "li4": "Acabado textil",
       "id": "1"
     },
     {
@@ -19,8 +19,8 @@ let pruebaJson = [
       "precio": "186 USD",
       "li1": "0.5mm de plomo",
       "li2": "66x95cm",
-      "li3": "con bolsillo",
-      "li4": "acabado plástico",
+      "li3": "Con bolsillo",
+      "li4": "Acabado plástico",
       "id": "2"
     },
     {
@@ -31,8 +31,8 @@ let pruebaJson = [
       "precio": "70 USD",
       "li1": "0.5mm de plomo",
       "li2": "40x40cm",
-      "li3": "tipo falda",
-      "li4": "",
+      "li3": "Tipo falda",
+      "li4": " ",
       "id": "3"
     },
     {
@@ -42,9 +42,9 @@ let pruebaJson = [
       "modelo": "SS-53",
       "precio": "137 USD",
       "li1": "0.55mm de plomo",
-      "li2": "con estuche",
-      "li3": "",
-      "li4": "",
+      "li2": "Con estuche",
+      "li3": " ",
+      "li4": " ",
       "id": "4"
     },
     {
@@ -54,9 +54,9 @@ let pruebaJson = [
       "modelo": "S-53",
       "precio": "118 USD",
       "li1": "0.5mm de plomo",
-      "li2": "con estuche",
-      "li3": "",
-      "li4": "",
+      "li2": "Con estuche",
+      "li3": " ",
+      "li4": " ",
       "id": "5"
     },
     {
@@ -66,9 +66,9 @@ let pruebaJson = [
       "modelo": "GOOGLE-HO",
       "precio": "161 USD",
       "li1": "0.5mm de plomo",
-      "li2": "con bolsa de tela",
-      "li3": "",
-      "li4": "",
+      "li2": "Con bolsa de tela",
+      "li3": " ",
+      "li4": " ",
       "id": "6"
     },
     {
@@ -79,8 +79,8 @@ let pruebaJson = [
       "precio": "133 USD",
       "li1": "0.5mm de plomo",
       "li2": "350mm de largo",
-      "li3": "tamaño mediano o grande",
-      "li4": "",
+      "li3": "Tamaño mediano o grande",
+      "li4": " ",
       "id": "7"
     },
     {
@@ -90,9 +90,9 @@ let pruebaJson = [
       "modelo": "XR47",
       "precio": "43 USD",
       "li1": "RADIAXON",
-      "li2": "equivalente a 0.5mm de plomo",
-      "li3": "tamaño mediano o grande",
-      "li4": "",
+      "li2": "Equivalente a 0.5mm de plomo",
+      "li3": "Tamaño mediano o grande",
+      "li4": " ",
       "id": "8"
     },
     {
@@ -102,9 +102,9 @@ let pruebaJson = [
       "modelo": "STANDAR-O5",
       "precio": "41 USD",
       "li1": "0.5mm de plomo",
-      "li2": "",
-      "li3": "",
-      "li4": "",
+      "li2": " ",
+      "li3": " ",
+      "li4": " ",
       "id": "9"
     },
     {
@@ -114,9 +114,9 @@ let pruebaJson = [
       "modelo": "DELUX-O5",
       "precio": "54 USD",
       "li1": "0.5mm de plomo",
-      "li2": "",
-      "li3": "",
-      "li4": "",
+      "li2": " ",
+      "li3": " ",
+      "li4": " ",
       "id": "10"
     },
     {
@@ -127,8 +127,8 @@ let pruebaJson = [
       "precio": "135 USD",
       "li1": "0.5mm de plomo",
       "li2": "Juego de 3 protectores: grande mediano y chico",
-      "li3": "",
-      "li4": "",
+      "li3": " ",
+      "li4": " ",
       "id": "11"
     },
     {
@@ -138,9 +138,9 @@ let pruebaJson = [
       "modelo": "S806 M/L",
       "precio": "37 USD",
       "li1": "0.5mm de plomo",
-      "li2": "0.5mm de plomo",
-      "li3": "una pieza",
-      "li4": "tamaño mediano o grande",
+      "li2": "Una pieza",
+      "li3": "Tamaño mediano o grande",
+      "li4": " ",
       "id": "12"
     }
   ]
@@ -154,7 +154,7 @@ function anadirProducto(productos){
     productos.forEach(function(producto){
 
         let card = `
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 div-centered" style="margin-top:100px;">
         <div class="card" style="width: 18rem;"> 
         <img src="${producto.imagen}" class="card-img-top" alt="..."> 
             <div class="card-body"> 
@@ -171,7 +171,7 @@ function anadirProducto(productos){
                     </ul> 
                 </p>   
                 <div class="button text-center">      
-                  <button class="btn btn-info" id="btn-add-car">Comprar</button>   
+                  <button class="btn btn-info btn-add-car">Comprar</button>   
                 </div>   
             </div> <!--card-body--> 
         </div><!--card--> 
@@ -187,42 +187,16 @@ function anadirProducto(productos){
 anadirProducto(pruebaJson);
 
 
-/*
-        <!-- Empieza container producto --> 
-        <div class="container col-md-3 col-lg-3 col-xl-3 mx-auto mb-6"> 
-            <div class="card" style="width: 18rem;"> 
-                <img src="${producto.imagen}" class="card-img-top" alt="..."> 
-                    <div class="card-body"> 
-                        <h4 class="card-title text-center">${producto.titulo}</h4> 
-                        <h5 class="card-subtitle mb-2 text-center">${producto.precio}</h5> 
-                        <h6 class="card-subtitle mb-2 text-muted text-center">${producto.marca}</h6> 
-                        <h6 class="card-subtitle mb-2 text-muted text-center">${producto.modelo}</h6> 
-                        <p class="card-text"> 
-                            <ul style="list-style-position: inside;"> 
-                                <li>0.5 mm de plomo</li> 
-                                <li>66x95cm</li> 
-                                <li>Con bolsillo</li> 
-                                <li>Acabado textil</li> 
-                            </ul> 
-                        </p>   
-                        <div class="button text-center">      
-                            <a href="#" class="btn btn-info text-center">Comprar</a>   
-                        </div>   
-                 
-                </div> <!--card-body--> 
-            </div><!--card--> 
-        </div><!--container producto--> 
-*/
 // Función boton pop up
-    const btnAdd = document.getElementById('btn-add-car');
-
-    btnAdd.addEventListener('click', function(){
-        new Swal({
-            icon: 'success',
-            title: 'AGREGADO AL CARRITO',
-            showConfirmButton: false,
-            timer: 1500,
-            position: 'center',
-          })
-    })//addEventListener 
-
+const botonClase = document.getElementsByClassName("btn-add-car");
+for(i=0 ; i < botonClase.length ; i++){
+  botonClase[i].addEventListener('click', function(){
+      new Swal({
+        icon: 'success',
+        title: 'AGREGADO AL CARRITO',
+        showConfirmButton: false,
+        timer: 1500,
+        position: 'center',
+      })
+  })//addEventListener 
+} // fin del for
