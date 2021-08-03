@@ -171,7 +171,7 @@ function anadirProducto(productos){
                     </ul> 
                 </p>   
                 <div class="button text-center">      
-                  <button class="btn btn-info" id="btn-add-car">Comprar</button>   
+                  <button class="btn btn-info btn-add-car">Comprar</button>   
                 </div>   
             </div> <!--card-body--> 
         </div><!--card--> 
@@ -187,42 +187,16 @@ function anadirProducto(productos){
 anadirProducto(pruebaJson);
 
 
-/*
-        <!-- Empieza container producto --> 
-        <div class="container col-md-3 col-lg-3 col-xl-3 mx-auto mb-6"> 
-            <div class="card" style="width: 18rem;"> 
-                <img src="${producto.imagen}" class="card-img-top" alt="..."> 
-                    <div class="card-body"> 
-                        <h4 class="card-title text-center">${producto.titulo}</h4> 
-                        <h5 class="card-subtitle mb-2 text-center">${producto.precio}</h5> 
-                        <h6 class="card-subtitle mb-2 text-muted text-center">${producto.marca}</h6> 
-                        <h6 class="card-subtitle mb-2 text-muted text-center">${producto.modelo}</h6> 
-                        <p class="card-text"> 
-                            <ul style="list-style-position: inside;"> 
-                                <li>0.5 mm de plomo</li> 
-                                <li>66x95cm</li> 
-                                <li>Con bolsillo</li> 
-                                <li>Acabado textil</li> 
-                            </ul> 
-                        </p>   
-                        <div class="button text-center">      
-                            <a href="#" class="btn btn-info text-center">Comprar</a>   
-                        </div>   
-                 
-                </div> <!--card-body--> 
-            </div><!--card--> 
-        </div><!--container producto--> 
-*/
 // Función boton pop up
-    const btnAdd = document.getElementById('btn-add-car');
-
-    btnAdd.addEventListener('click', function(){
-        new Swal({
-            icon: 'success',
-            title: 'AGREGADO AL CARRITO',
-            showConfirmButton: false,
-            timer: 1500,
-            position: 'center',
-          })
-    })//addEventListener 
-
+const botonClase = document.getElementsByClassName("btn-add-car");
+for(i=0 ; i < botonClase.length ; i++){
+  botonClase[i].addEventListener('click', function(){
+      new Swal({
+        icon: 'success',
+        title: 'AGREGADO AL CARRITO',
+        showConfirmButton: false,
+        timer: 1500,
+        position: 'center',
+      })
+  })//addEventListener 
+} // fin del for
