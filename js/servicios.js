@@ -1,17 +1,21 @@
-$(function() {
-	
-	window.setTimeout(function() {
-		$('section').css('opacity', '1');
-	}, 2000);
+var etc = document.getElementById("etc");
+var moreText = document.getElementById("more");
+var btnText = document.getElementById("myBtn");
+var img = document.getElementById("imagenServicios");
 
-	$('div').addClass('default');
-	
-		$('div').on('click', function() {
-	
-	  	var e = $('section > div');
-			if(e.hasClass('expand')){
-				 e.removeClass('expand');
-			 	$(this).addClass('expand');
-			} else { $(this).addClass('expand'); }
-		})
-})
+function myFunction() {
+	if (etc.style.display === "none") {
+	  etc.style.display = "inline";
+	  btnText.innerHTML = "Ver más"; 
+	  moreText.style.display = "none";
+	  img.style.width = "10px;"
+	  
+	} else {
+	  etc.style.display = "none";
+	  btnText.innerHTML = "Ver menos"; 
+	  moreText.style.display = "inline";
+	} //else
+  }// myFunction
+
+
+  

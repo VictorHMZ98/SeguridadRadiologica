@@ -84,6 +84,22 @@ h4{
     color:var(--azul);
 }
 
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: var(--azul);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: "Open sans";
+}
+
+a:hover{
+    color: white;
+    text-decoration: none;
+}
+
 .container-bios{
     margin-top: 30px;
     margin-bottom: 30px;
@@ -125,7 +141,6 @@ h4{
 
 }
 
-
 .row{
     margin: 0px;
 }
@@ -155,6 +170,7 @@ h4{
     text-underline-offset: 7px;
     padding-top: 20px;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .footer-title-txt-mobile{
@@ -162,10 +178,6 @@ h4{
     font-weight: 700;
     padding-top: 20px;
     margin-bottom: 20px;
-}
-
-.a{
-    text-decoration: none;
 }
 
 .footer-link-copyright{
@@ -178,6 +190,24 @@ h4{
     padding: 2px;
     margin-right: 5px;
 }
+
+.container-services-img{
+    width: 50%;
+}
+
+.container-services-text{
+    width: 50%;
+}
+
+.container-services-text-blackbox{
+    background-color: var(--negro);
+    color: white;
+    padding: 20px;
+    font-weight: 500;
+}
+#more {
+    display: none;}
+
 
 @keyframes slideIn{
     from {
