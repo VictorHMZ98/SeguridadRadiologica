@@ -1,19 +1,17 @@
+$(function() {
+	
+	window.setTimeout(function() {
+		$('section').css('opacity', '1');
+	}, 2000);
 
-
-
-
-window.onload = function () {
-    
-    const btnAdd = document.getElementById('btn-add-car');
-
-    btnAdd.addEventListener('click', function(){
-        new Swal({
-            icon: 'success',
-            title: 'Agregado al carrito',
-            showConfirmButton: false,
-            timer: 1500,
-            position: 'center',
-          })
-    
-    })//addEventListener 
-}// window.onload
+	$('div').addClass('default');
+	
+		$('div').on('click', function() {
+	
+	  	var e = $('section > div');
+			if(e.hasClass('expand')){
+				 e.removeClass('expand');
+			 	$(this).addClass('expand');
+			} else { $(this).addClass('expand'); }
+		})
+})
