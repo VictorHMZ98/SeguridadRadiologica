@@ -131,9 +131,11 @@ var etc = document.getElementById("etc");
 var moreText = document.getElementById("more");
 var btnText = document.getElementById("myBtn");
 
+
 	function myFunction() {
-		if (etc.style.display === "none") {
-			btnText.innerHTML = "Ver más";
+			if (etc.style.display === "none") {
+				etc.style.display = "inline";
+				btnText.innerHTML = "Ver más";
 			moreText.style.display = "none";
 		} else {
 			etc.style.display = "none";
