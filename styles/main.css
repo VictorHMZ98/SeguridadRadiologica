@@ -78,7 +78,17 @@ h4{
     color: var(--negro);
     text-transform: uppercase;
     text-align: center;
+    padding: 0px;
 }
+
+.navbar-nav{
+margin:0px;
+}
+
+.nav-item{
+    font-size: 1em;
+}
+
 
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
     color:var(--azul);
@@ -88,6 +98,7 @@ h4{
     color: #fff;
     background-color: var(--azul);
 }
+
 
 a {
     color:  var(--negro);
@@ -207,7 +218,7 @@ a:hover{
     padding: 20px;
     font-weight: 500;
 }
-#more {
+.more {
     display: none;
 }
 
