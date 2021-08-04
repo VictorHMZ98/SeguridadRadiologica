@@ -203,6 +203,7 @@ for(i=0 ; i < botonClase.length ; i++){
 } // fin del for
 
 
+<<<<<<< HEAD
 function listaElementos(json){
   let descr,spl,myDiv;
   for( i = 0 ; i < json.length ; i++ ){
@@ -234,4 +235,20 @@ for (let i = 0; i < 4; i++) {
   }// else       
   }//for i 
   myDiv.innerHTML += "</ul>";
+=======
+/*
+let lis = "0.55m de plomo";
+let a = lis.split("|");
+let myDiv = document.getElementById("div_lis");
+myDiv.innerHTML = "<ul>";
+for (let i = 0; i < 4; i++) {
+    if (i<a.length){
+        myDiv.innerHTML +="<li>"+a[i] + "</li>";
+    } else {
+        myDiv.innerHTML +="<br/>"
+    }// else 
+    
+}//for i
+myDiv.innerHTML += "</ul>";
+>>>>>>> bd07ecf7952bbcbdefc3118dbc782a456210a14b
 */
