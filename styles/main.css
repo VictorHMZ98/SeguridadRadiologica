@@ -153,6 +153,9 @@ a:hover{
 .card{
     border: none;
 }
+.card-title {
+    height: 100px;
+}
 
 .footer-background-black{
     background-color: var(--negro);
@@ -205,12 +208,13 @@ a:hover{
     font-weight: 500;
 }
 #more {
-    display: none;}
+    display: none;
+}
 
 li{
     list-style: none;
-
 }
+
 @keyframes slideIn{
     from {
         opacity: 0;

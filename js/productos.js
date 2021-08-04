@@ -6,7 +6,7 @@ let pruebaJson = [
       "modelo": "E6995",
       "precio": "121 USD",
       "li1": "0.5mm de plomo",
-      "li2": "66x95cm",
+      "li2": "66x95 cm",
       "li3": "Con bolsillo",
       "li4": "Acabado textil",
       "id": "1"
@@ -18,7 +18,7 @@ let pruebaJson = [
       "modelo": "S6995",
       "precio": "186 USD",
       "li1": "0.5mm de plomo",
-      "li2": "66x95cm",
+      "li2": "66x95 cm",
       "li3": "Con bolsillo",
       "li4": "Acabado plástico",
       "id": "2"
@@ -30,9 +30,9 @@ let pruebaJson = [
       "modelo": "SQUARE",
       "precio": "70 USD",
       "li1": "0.5mm de plomo",
-      "li2": "40x40cm",
+      "li2": "40x40 cm",
       "li3": "Tipo falda",
-      "li4": " ",
+      "li4": "<br>",
       "id": "3"
     },
     {
@@ -43,8 +43,8 @@ let pruebaJson = [
       "precio": "137 USD",
       "li1": "0.55mm de plomo",
       "li2": "Con estuche",
-      "li3": " ",
-      "li4": " ",
+      "li3": "<br>",
+      "li4": " <br>",
       "id": "4"
     },
     {
@@ -55,8 +55,8 @@ let pruebaJson = [
       "precio": "118 USD",
       "li1": "0.5mm de plomo",
       "li2": "Con estuche",
-      "li3": " ",
-      "li4": " ",
+      "li3": " <br>",
+      "li4": "<br> ",
       "id": "5"
     },
     {
@@ -67,8 +67,8 @@ let pruebaJson = [
       "precio": "161 USD",
       "li1": "0.5mm de plomo",
       "li2": "Con bolsa de tela",
-      "li3": " ",
-      "li4": " ",
+      "li3": " <br>",
+      "li4": "<br> ",
       "id": "6"
     },
     {
@@ -80,7 +80,7 @@ let pruebaJson = [
       "li1": "0.5mm de plomo",
       "li2": "350mm de largo",
       "li3": "Tamaño mediano o grande",
-      "li4": " ",
+      "li4": "<br> ",
       "id": "7"
     },
     {
@@ -92,7 +92,7 @@ let pruebaJson = [
       "li1": "RADIAXON",
       "li2": "Equivalente a 0.5mm de plomo",
       "li3": "Tamaño mediano o grande",
-      "li4": " ",
+      "li4": "",
       "id": "8"
     },
     {
@@ -102,9 +102,9 @@ let pruebaJson = [
       "modelo": "STANDAR-O5",
       "precio": "41 USD",
       "li1": "0.5mm de plomo",
-      "li2": " ",
-      "li3": " ",
-      "li4": " ",
+      "li2": "<br> ",
+      "li3": "<br> ",
+      "li4": "<br> ",
       "id": "9"
     },
     {
@@ -114,9 +114,9 @@ let pruebaJson = [
       "modelo": "DELUX-O5",
       "precio": "54 USD",
       "li1": "0.5mm de plomo",
-      "li2": " ",
-      "li3": " ",
-      "li4": " ",
+      "li2": "<br> ",
+      "li3": "<br> ",
+      "li4": "<br> ",
       "id": "10"
     },
     {
@@ -127,7 +127,7 @@ let pruebaJson = [
       "precio": "135 USD",
       "li1": "0.5mm de plomo",
       "li2": "Juego de 3 protectores: grande mediano y chico",
-      "li3": " ",
+      "li3": "<br>",
       "li4": " ",
       "id": "11"
     },
@@ -140,12 +140,18 @@ let pruebaJson = [
       "li1": "0.5mm de plomo",
       "li2": "Una pieza",
       "li3": "Tamaño mediano o grande",
-      "li4": " ",
+      "li4": " <br>",
       "id": "12"
     }
   ]
 
-
+  function searchOnDatabase(idProductos) {
+    const productoFitrado = arregloProductos.find(producto => {
+        return producto.id == parseInt(idProductos)
+    })
+    console.log(productoFitrado)
+    return productoFitrado;
+}
 function anadirProducto(productos){
 
     const ancla = document.getElementById("productos");
@@ -169,7 +175,7 @@ function anadirProducto(productos){
                         <li>${producto.li3} </li>
                         <li>${producto.li4} </li>
                     </ul> 
-                </p>   
+                </p> 
                 <div class="button text-center">      
                   <button class="btn btn-info btn-add-car">Comprar</button>   
                 </div>   
@@ -185,7 +191,6 @@ function anadirProducto(productos){
 
 } //Fin del anadirProducto
 anadirProducto(pruebaJson);
-
 
 // Función boton pop up
 const botonClase = document.getElementsByClassName("btn-add-car");
