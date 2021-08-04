@@ -192,3 +192,20 @@ for(i=0 ; i < botonClase.length ; i++){
       })
   })//addEventListener 
 } // fin del for
+
+
+/*
+let lis = "0.55m de plomo";
+let a = lis.split("|");
+let myDiv = document.getElementById("div_lis");
+myDiv.innerHTML = "<ul>";
+for (let i = 0; i < 4; i++) {
+    if (i<a.length){
+        myDiv.innerHTML +="<li>"+a[i] + "</li>";
+    } else {
+        myDiv.innerHTML +="<br/>"
+    }// else 
+    
+}//for i
+myDiv.innerHTML += "</ul>";
+*/
