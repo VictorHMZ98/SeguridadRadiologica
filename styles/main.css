@@ -115,7 +115,7 @@ a:hover{
 
 li{
     list-style: none;
-    font-size: 13px;
+  /* font-size: 13px; */
 }
 
 .container-bios{
