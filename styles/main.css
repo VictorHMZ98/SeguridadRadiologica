@@ -153,6 +153,9 @@ a:hover{
 .card{
     border: none;
 }
+.card-title {
+    height: 100px;
+}
 
 .footer-background-black{
     background-color: var(--negro);
@@ -205,12 +208,13 @@ a:hover{
     font-weight: 500;
 }
 #more {
-    display: none;}
+    display: none;
+}
 
 li{
     list-style: none;
-
 }
+
 @keyframes slideIn{
     from {
         opacity: 0;
@@ -285,14 +289,20 @@ li{
     
 }
 
-/* Chrome, Safari, Edge, Opera */
+/* FORMULARIO DE CONTACTO Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* Firefox */
+/* FORMULARIO DE CONTACTO Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+/*Formulario admin*/
+.adminForm{
+    border: gray 1px solid;
+    border-radius: 25px;
 }
