@@ -4,9 +4,8 @@ let pruebaJson = [
       "titulo": "Mandil emplomado económico",
       "marca": "Marca Slim Royal",
       "modelo": "E6995",
-      "precio": "121 USD",
       "li1": "0.5mm de plomo",
-      "li2": "66x95cm",
+      "li2": "66x95 cm",
       "li3": "Con bolsillo",
       "li4": "Acabado textil",
       "id": "1"
@@ -16,9 +15,8 @@ let pruebaJson = [
       "titulo": "Mandil emplomado estándar",
       "marca": "Marca Slim Royal",
       "modelo": "S6995",
-      "precio": "186 USD",
       "li1": "0.5mm de plomo",
-      "li2": "66x95cm",
+      "li2": "66x95 cm",
       "li3": "Con bolsillo",
       "li4": "Acabado plástico",
       "id": "2"
@@ -28,11 +26,10 @@ let pruebaJson = [
       "titulo": "Faldón emplomado",
       "marca": "Marca Slim Royale",
       "modelo": "SQUARE",
-      "precio": "70 USD",
       "li1": "0.5mm de plomo",
-      "li2": "40x40cm",
+      "li2": "40x40 cm",
       "li3": "Tipo falda",
-      "li4": " ",
+      "li4": "<br>",
       "id": "3"
     },
     {
@@ -40,11 +37,10 @@ let pruebaJson = [
       "titulo": "Lentes emplomados",
       "marca": "Marca Slim Royale",
       "modelo": "SS-53",
-      "precio": "137 USD",
       "li1": "0.55mm de plomo",
       "li2": "Con estuche",
-      "li3": " ",
-      "li4": " ",
+      "li3": "<br>",
+      "li4": " <br>",
       "id": "4"
     },
     {
@@ -52,11 +48,10 @@ let pruebaJson = [
       "titulo": "Lentes emplomados",
       "marca": "Marca Slim Royale",
       "modelo": "S-53",
-      "precio": "118 USD",
       "li1": "0.5mm de plomo",
       "li2": "Con estuche",
-      "li3": " ",
-      "li4": " ",
+      "li3": " <br>",
+      "li4": "<br> ",
       "id": "5"
     },
     {
@@ -64,11 +59,10 @@ let pruebaJson = [
       "titulo": "Googles emplomados",
       "marca": "Marca Slim Royale",
       "modelo": "GOOGLE-HO",
-      "precio": "161 USD",
       "li1": "0.5mm de plomo",
       "li2": "Con bolsa de tela",
-      "li3": " ",
-      "li4": " ",
+      "li3": " <br>",
+      "li4": "<br> ",
       "id": "6"
     },
     {
@@ -76,11 +70,10 @@ let pruebaJson = [
       "titulo": "Guantes emplomados",
       "marca": "Marca Slim Royale",
       "modelo": "100 M/L",
-      "precio": "133 USD",
       "li1": "0.5mm de plomo",
       "li2": "350mm de largo",
       "li3": "Tamaño mediano o grande",
-      "li4": " ",
+      "li4": "<br> ",
       "id": "7"
     },
     {
@@ -88,11 +81,10 @@ let pruebaJson = [
       "titulo": "Guantes emplomados",
       "marca": "Marca Shielding",
       "modelo": "XR47",
-      "precio": "43 USD",
       "li1": "RADIAXON",
       "li2": "Equivalente a 0.5mm de plomo",
       "li3": "Tamaño mediano o grande",
-      "li4": " ",
+      "li4": "",
       "id": "8"
     },
     {
@@ -100,11 +92,10 @@ let pruebaJson = [
       "titulo": "Collarín emplomado",
       "marca": "Marca Slim Royale",
       "modelo": "STANDAR-O5",
-      "precio": "41 USD",
       "li1": "0.5mm de plomo",
-      "li2": " ",
-      "li3": " ",
-      "li4": " ",
+      "li2": "<br> ",
+      "li3": "<br> ",
+      "li4": "<br> ",
       "id": "9"
     },
     {
@@ -112,11 +103,10 @@ let pruebaJson = [
       "titulo": "Collarín emplomado de lujo",
       "marca": "Marca Slim Royale",
       "modelo": "DELUX-O5",
-      "precio": "54 USD",
       "li1": "0.5mm de plomo",
-      "li2": " ",
-      "li3": " ",
-      "li4": " ",
+      "li2": "<br> ",
+      "li3": "<br> ",
+      "li4": "<br> ",
       "id": "10"
     },
     {
@@ -124,10 +114,9 @@ let pruebaJson = [
       "titulo": "Protectores de gónadas",
       "marca": "Marca Slim Royale",
       "modelo": "S806A",
-      "precio": "135 USD",
       "li1": "0.5mm de plomo",
       "li2": "Juego de 3 protectores: grande mediano y chico",
-      "li3": " ",
+      "li3": "<br>",
       "li4": " ",
       "id": "11"
     },
@@ -136,16 +125,21 @@ let pruebaJson = [
       "titulo": "Protectores de gónadas",
       "marca": "Marca Slim Royale",
       "modelo": "S806 M/L",
-      "precio": "37 USD",
       "li1": "0.5mm de plomo",
       "li2": "Una pieza",
       "li3": "Tamaño mediano o grande",
-      "li4": " ",
+      "li4": " <br>",
       "id": "12"
     }
   ]
 
-
+  function searchOnDatabase(idProductos) {
+    const productoFitrado = arregloProductos.find(producto => {
+        return producto.id == parseInt(idProductos)
+    })
+    console.log(productoFitrado)
+    return productoFitrado;
+}
 function anadirProducto(productos){
 
     const ancla = document.getElementById("productos");
@@ -159,7 +153,6 @@ function anadirProducto(productos){
         <img src="${producto.imagen}" class="card-img-top" alt="..."> 
             <div class="card-body"> 
                 <h4 class="card-title text-center">${producto.titulo}</h4> 
-                <h5 class="card-subtitle mb-2 text-center">${producto.precio}</h5> 
                 <h6 class="card-subtitle mb-2 text-muted text-center">${producto.marca}</h6> 
                 <h6 class="card-subtitle mb-2 text-muted text-center">${producto.modelo}</h6> 
                 <p class="card-text"> 
@@ -169,7 +162,7 @@ function anadirProducto(productos){
                         <li>${producto.li3} </li>
                         <li>${producto.li4} </li>
                     </ul> 
-                </p>   
+                </p> 
                 <div class="button text-center">      
                   <button class="btn btn-info btn-add-car">Comprar</button>   
                 </div>   
@@ -185,7 +178,6 @@ function anadirProducto(productos){
 
 } //Fin del anadirProducto
 anadirProducto(pruebaJson);
-
 
 // Función boton pop up
 const botonClase = document.getElementsByClassName("btn-add-car");
