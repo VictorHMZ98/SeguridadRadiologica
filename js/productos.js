@@ -8,6 +8,7 @@ let pruebaJson = [
       "li2": "66x95 cm",
       "li3": "Con bolsillo",
       "li4": "Acabado textil",
+      "descripcion" : "0.5mm de plomo,66x95 cm,Con bolsillo,Acabado textil",
       "id": "1"
     },
     {
@@ -19,6 +20,7 @@ let pruebaJson = [
       "li2": "66x95 cm",
       "li3": "Con bolsillo",
       "li4": "Acabado plástico",
+      "descripcion" : "0.5mm de plomo,66x95 cm,Con bolsillo,Acabado plástico",
       "id": "2"
     },
     {
@@ -30,6 +32,7 @@ let pruebaJson = [
       "li2": "40x40 cm",
       "li3": "Tipo falda",
       "li4": "<br>",
+      "descripcion" : "0.5mm de plomo,40x40 cm,Tipo falda",
       "id": "3"
     },
     {
@@ -41,6 +44,7 @@ let pruebaJson = [
       "li2": "Con estuche",
       "li3": "<br>",
       "li4": " <br>",
+      "descripcion" : "0.55mm de plomo,Con estuche",
       "id": "4"
     },
     {
@@ -52,6 +56,7 @@ let pruebaJson = [
       "li2": "Con estuche",
       "li3": " <br>",
       "li4": "<br> ",
+      "descripcion" : "0.5mm de plomo,Con estuche",
       "id": "5"
     },
     {
@@ -63,6 +68,7 @@ let pruebaJson = [
       "li2": "Con bolsa de tela",
       "li3": " <br>",
       "li4": "<br> ",
+      "descripcion" : "0.5mm de plomo,Con bolsa de tela",
       "id": "6"
     },
     {
@@ -74,6 +80,7 @@ let pruebaJson = [
       "li2": "350mm de largo",
       "li3": "Tamaño mediano o grande",
       "li4": "<br> ",
+      "descripcion" : "0.5mm de plomo,350mm de largo,Tamaño mediano o grande",
       "id": "7"
     },
     {
@@ -85,6 +92,7 @@ let pruebaJson = [
       "li2": "Equivalente a 0.5mm de plomo",
       "li3": "Tamaño mediano o grande",
       "li4": "",
+      "descripcion" : "RADIAXON,Equivalente a 0.5mm,    de plomo,Tamaño mediano o grande",
       "id": "8"
     },
     {
@@ -96,6 +104,7 @@ let pruebaJson = [
       "li2": "<br> ",
       "li3": "<br> ",
       "li4": "<br> ",
+      "descripcion" : "0.5mm de plomo",
       "id": "9"
     },
     {
@@ -107,6 +116,7 @@ let pruebaJson = [
       "li2": "<br> ",
       "li3": "<br> ",
       "li4": "<br> ",
+      "descripcion" : "0.5mm de plomo",
       "id": "10"
     },
     {
@@ -117,7 +127,8 @@ let pruebaJson = [
       "li1": "0.5mm de plomo",
       "li2": "Juego de 3 protectores: grande mediano y chico",
       "li3": "<br>",
-      "li4": " ",
+      "li4": "<br>",
+      "descripcion" : "0.5mm de plomo,Juego de 3 protectores,    grande mediano y chico",
       "id": "11"
     },
     {
@@ -129,6 +140,7 @@ let pruebaJson = [
       "li2": "Una pieza",
       "li3": "Tamaño mediano o grande",
       "li4": " <br>",
+      "descripcion" : "0.5mm de plomo,Una pieza,Tamaño mediano o grande",
       "id": "12"
     }
   ]
@@ -156,11 +168,8 @@ function anadirProducto(productos){
                 <h6 class="card-subtitle mb-2 text-muted text-center">${producto.marca}</h6> 
                 <h6 class="card-subtitle mb-2 text-muted text-center">${producto.modelo}</h6> 
                 <p class="card-text"> 
-                    <ul style="list-style-position: inside;"> 
-                        <li>${producto.li1} </li>
-                        <li>${producto.li2} </li>
-                        <li>${producto.li3} </li>
-                        <li>${producto.li4} </li>
+                    <ul style="list-style-position: inside;" id="lista-desor_${producto.id}"> 
+
                     </ul> 
                 </p> 
                 <div class="button text-center">      
@@ -194,18 +203,21 @@ for(i=0 ; i < botonClase.length ; i++){
 } // fin del for
 
 
-/*
-let lis = "0.55m de plomo";
-let a = lis.split("|");
-let myDiv = document.getElementById("div_lis");
-myDiv.innerHTML = "<ul>";
-for (let i = 0; i < 4; i++) {
-    if (i<a.length){
-        myDiv.innerHTML +="<li>"+a[i] + "</li>";
-    } else {
-        myDiv.innerHTML +="<br/>"
-    }// else 
-    
-}//for i
-myDiv.innerHTML += "</ul>";
-*/
+
+function listaElementos(json){
+  let descr,spl,myDiv;
+  for( i = 0 ; i < json.length ; i++ ){
+    let descr = json[i].descripcion;
+    let spl = descr.split(","); 
+    let myDiv = document.getElementById("lista-desor_" + json[i].id);
+  
+  for (let j = 0; j < 4; j++) { 
+    if (j < spl.length){         
+      myDiv.innerHTML +="<li>"+ spl[j] + "</li>";     
+    } else {         
+      myDiv.innerHTML +="<br/>"
+    }// else       
+  }//for j
+}// for i
+}// function listaElementos
+listaElementos(pruebaJson);
