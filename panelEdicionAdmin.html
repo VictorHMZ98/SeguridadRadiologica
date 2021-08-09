@@ -76,86 +76,112 @@
         </div> <!-- Termina el navbar principal -->
     </div> <!-- Termina el container fluid, hora de alinear todo-->
     <!--Nav bar -->
+    <div class="container">
 
-<div class="container" style="margin-top: 4vh;">
-    <div class="row">
-        <div class="col"></div>
-        <div class="col-10">
-    
-            <ul class="nav nav-pills nav-fill">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link bg-light text-dark" href="#">Servicios</a>
-                </li>
-            </ul>
+        <div class="row mt-5">
+            <div class="col-12">
+                <h1>PANEL DEL ADMINISTRADOR</h1>
+            </div>
         </div>
-        <div class="col"></div>
-    </div>
 
-</div>
+        <div class="row">
+            <div class="col-4">
+                <!-- Panel de edición  -->
+                <div class="container">
+                    <div class="adminForm">
+
+                        <h4>Panel de edición</h4>
 
 
-<div class="container" style="margin-bottom: 2vh;margin-top: 4vh;">
-    <div class="row row-cols-6">
-        
-        <div class="col-4 adminForm">
-            
-                <h4>Panel de edición</h4>
-            
-            
-            <form id="needs-validation" style="margin-bottom: 20px;" novalidate><!--Formulario de edición-->
-                <div class="form-group">
-    
-                    <label for="validationCustom01">Nombre del producto: </label>
-                    <input type="text" name="product" class="form-control" id="product" maxlength="31" required>
-                   
-                    <div class="invalid-feedback"><!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
-                        Nombre válido es requerido
+                        <form id="needs-validation" style="margin-bottom: 20px;" novalidate>
+                            <!--Formulario de edición-->
+                            <div class="form-group">
+
+                                <label for="validationCustom01">Nombre del producto: </label>
+                                <input type="text" name="product" class="form-control" id="product" maxlength="31"
+                                    required>
+
+                                <div class="invalid-feedback">
+                                    <!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
+                                    Nombre válido es requerido
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <label for="validationCustom01">Marca:</label>
+                                <input type="text" name="product" class="form-control" id="product" maxlength="31"
+                                    required>
+
+                                <div class="invalid-feedback">
+                                    <!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
+                                    Marca válido es requerido
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="validationCustom01">Modelo: </label>
+                                <input type="text" name="product" class="form-control" id="product" maxlength="31"
+                                    required>
+
+                                <div class="invalid-feedback">
+                                    <!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
+                                    Nombre válido es requerido
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="image">Selecciona una imagen (.jpeg,.jpg,.png)</label>
+                                <input type="file" class="form-control-file" name="image" id="image"
+                                    accept=".jpeg,.jpg,.png">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="notas">Descripción: </label>
+                                <textarea class="form-control" name="notas" id="notas" rows="3"
+                                    maxlength="280"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-info">Publicar</button>
+
+                            <button type="button" class="btn btn-danger">Desactivar</button>
+                        </form>
+                        <!--Formulario de edición-->
                     </div>
                 </div>
-    
-                <div class="form-group">
-                    <label for="image">Selecciona una imagen (.jpeg,.jpg,.png)</label>
-                    <input type="file" class="form-control-file" name="image" id="image" accept=".jpeg,.jpg,.png">
+                <!-- termina Panel de edición  -->
+
+
+            </div>
+            <div class="col-8">
+                <div class="row">
+                    <ul class="nav nav-pills nav-fill" style=" width: 700px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link bg-light text-dark" href="#">Servicios</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="form-group">
-    
-                    <label for="price">Precio: </label>
-                    <input type="number" class="form-control" name="price" id="price">
-    
+                <!-- Container  de productos-->
+                <div class="container div-centered">
+                    <div class="row" id="productos">
+                    </div>
                 </div>
-    
-                <div class="form-group">
-                    <label for="notas">Descripción: </label>
-                    <textarea class="form-control" name="notas" id="notas" rows="3" maxlength="280"></textarea>
-                </div>
-                
-                    <button type="submit" class="btn btn-info">Publicar</button>
-                
-                
-                    <button type="button" class="btn btn-danger">Desactivar</button>
-    
-            </form><!--Formulario de edición-->
+                <!-- termina Container  de productos-->
+            </div>
         </div>
-        
     </div>
 
-</div>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- boton ir arriba -->
+    <button onclick="topFunction()" id="irArriba">↑</button>
+    <!-- termina boton ir arriba -->
 
 
     <!-- Footer -->
@@ -170,7 +196,8 @@
                     <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
                         <!-- RadioMed -->
                         <h6 class="footer-title-txt">RadioMed</h6>
-                        <p style="margin-top: auto;"><a href="./contacto.html" class="footer-link-txt">Contáctanos</a></p>
+                        <p style="margin-top: auto;"><a href="./contacto.html" class="footer-link-txt">Contáctanos</a>
+                        </p>
                         <p><a href="./acercaDe.html" class="footer-link-txt">Nosotros</a> </p>
                         <p><a href="./iniciarSesion.html" class="footer-link-txt">Ingresar</a></p>
                     </div>
@@ -180,7 +207,8 @@
                     <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
                         <!-- Catálogo -->
                         <h6 class="footer-title-txt">Catálogo</h6>
-                        <p style="margin-top: auto;"><a href="./productos.html" class="footer-link-txt">Productos</a> </p>
+                        <p style="margin-top: auto;"><a href="./productos.html" class="footer-link-txt">Productos</a>
+                        </p>
                         <p><a href="./servicios.html" class="footer-link-txt">Servicios</a></p>
                     </div>
                     <!-- Grid column -->
@@ -192,10 +220,11 @@
                         <div class="footer-contacto">
                             <p><a href="#!" class="footer-link-txt"> <img src="./img/icons/icons-mail.svg"
                                         class="footer-img-icon">radiomed.contacto@gmail.com</a></p>
-                            <p><a href="#!" class="footer-link-txt"> <img src="./img/icons/icons-whastapp.svg" class="footer-img-icon">56 1490
+                            <p><a href="#!" class="footer-link-txt"> <img src="./img/icons/icons-whastapp.svg"
+                                        class="footer-img-icon">56 1490
                                     3815</a></p>
-                            <p><a href="https://www.facebook.com/RadioMedPR" class="footer-link-txt"> <img src="./img/icons/icons-fb.svg"
-                                        class="footer-img-icon">/RadioMedRP</a></p>
+                            <p><a href="https://www.facebook.com/RadioMedPR" class="footer-link-txt"> <img
+                                        src="./img/icons/icons-fb.svg" class="footer-img-icon">/RadioMedRP</a></p>
                         </div>
                     </div>
                     <!-- Grid column -->
@@ -220,6 +249,9 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
     <script src="./js/panelEdicionAdmin.js"></script>
+    <script src="./js/productos.js"></script>
+    <script src="./js/servicios.js"></script>
+    <script src="./js/irArriba.js"></script>
 
 </body>
 
