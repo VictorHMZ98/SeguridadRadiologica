@@ -11,7 +11,9 @@ function validateForm(e){//validateForm
     e.preventDefault();
     let inputNombre = document.getElementById('name');
     let inputEmail = document.getElementById('email');
+    let inputAdress = document.getElementById('adress');
     let inputPhone = document.getElementById('phone');
+    let inputRfc = document.getElementById('rfc');
     let inputNotes = document.getElementById('notas');
 
     console.log(typeof(inputNombre.value))
@@ -22,7 +24,7 @@ function validateForm(e){//validateForm
 
     function validateName(nombre){
       //let expReg= /^[A-Z]+$/;
-      let expReg = new RegExp(/^[a-zA-Z ]+$/)
+      let expReg = new RegExp(/^[a-zA-Z-á-ú ]+$/)  
       let esValido2 = expReg.test(nombre);
       console.log(esValido2);
       if(esValido2 == true){//if nombre
@@ -54,6 +56,24 @@ function validateForm(e){//validateForm
     }//validateEmail
 
     validateEmail(inputEmail.value)
+
+    function validateAdress(adress){//validateAdress
+      //let expReg= /^[A-Z]+$/;
+      let expReg = new RegExp(/^[a-zA-Z-á-ú-0-9 -.#/]+$/)  
+      let esValido3 = expReg.test(adress);
+      console.log(esValido3);
+      if(esValido3 == true){//if nombre
+          inputAdress.classList.remove('is-invalid')
+          inputAdress.classList.add('is-valid')
+          console.log('Hey si es mayor a =0')
+          return valid ++;
+        }else{
+          inputAdress.classList.add('is-invalid')
+          console.log('Esta vacío intenta nuevamente');
+      }//if nombre
+    }//validateAdress
+
+    validateAdress(inputAdress.value)
     
     if(inputPhone.value.length === 10 || inputPhone.value.length === 12){//if teléfono
         
@@ -64,16 +84,25 @@ function validateForm(e){//validateForm
       inputPhone.classList.add('is-invalid')
     }//if teléfono
 
-    if(inputNotes.value.length != 0 || inputPhone.value.length === 0){//if opcional
+    if(inputRfc.value.length != 0 || inputRfc.value.length === 0){//if opcional RFC
+      inputRfc.classList.remove('is-invalid')
+      inputRfc.classList.add('is-valid') 
+      valid++;
+    }else{
+      inputRfc.classList.add('is-valid')
+      valid++;
+    }//if opcional RFC
+
+    if(inputNotes.value.length != 0 || inputNotes.value.length === 0){//if opcional Notes
       inputNotes.classList.remove('is-invalid')
       inputNotes.classList.add('is-valid') 
       valid++;
     }else{
       inputNotes.classList.add('is-valid')
       valid++;
-    }//if opcional
+    }//if opcional Notes
 
-    if (valid==4){
+    if (valid==6){
       window.open('mailto:generation.c2.cdmxe3@gmail.com?subject=Contacto&body=body');
     }
     return valid = 0;
