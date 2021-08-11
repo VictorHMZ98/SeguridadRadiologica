@@ -110,12 +110,12 @@
                             <div class="form-group">
 
                                 <label for="validationCustom01">Marca:</label>
-                                <input type="text" name="product" class="form-control" id="product" maxlength="31"
+                                <input type="text" name="marca" class="form-control" id="marca" maxlength="31"
                                     required>
 
                                 <div class="invalid-feedback">
                                     <!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
-                                    Marca válido es requerido
+                                    Marca válida es requerida
                                 </div>
                             </div>
 
@@ -123,26 +123,27 @@
                             <div class="form-group">
 
                                 <label for="validationCustom01">Modelo: </label>
-                                <input type="text" name="product" class="form-control" id="product" maxlength="31"
+                                <input type="text" name="model" class="form-control" id="model" maxlength="31"
                                     required>
 
                                 <div class="invalid-feedback">
                                     <!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
-                                    Nombre válido es requerido
+                                    Modelo válido es requerido
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="image">Selecciona una imagen (.jpeg,.jpg,.png)</label>
-                                <input type="file" class="form-control-file" name="image" id="image"
-                                    accept=".jpeg,.jpg,.png">
+                                <input type="file" class="form-control-file" name="image" id="image" accept=".jpeg,.jpg,.png">
+                                <!-- <input type="file" class="form-control-file" name="image" id="image" accept=".jpeg,.jpg,.png" onchange="ValidarTamaño(this);"> -->
+
                             </div>
 
 
                             <div class="form-group">
-                                <label for="notas">Descripción: </label>
-                                <textarea class="form-control" name="notas" id="notas" rows="3"
-                                    maxlength="280"></textarea>
+                                <label for="validationCustom01">Descripción: </label>
+                                <textarea class="form-control" name="description" id="description" rows="3"
+                                    maxlength="280" placeholder="Detalle 1 | Detalle 2 | Detalle 3 | Detalle 4"></textarea>
                             </div>
 
                             <button type="submit" class="btn btn-info">Publicar</button>
@@ -252,6 +253,21 @@
     <script src="./js/productos.js"></script>
     <script src="./js/servicios.js"></script>
     <script src="./js/irArriba.js"></script>
+    <!-- <script type="text/javascript">
+    function ValidarTamaño(obj){
+      var uploadFile = obj.files[0];
+     
+      var img = new Image();
+      img.onload = function (){
+          if (this.width.toFixed(0) != 413 && this.height.toFixed(0) != 531){
+                alert("La imagen debe ser de tamaño 413px por 531px.");
+                $('#foto').val("");
+          }
+          
+          };
+      img.src = URL.createObjectURL(uploadFile);
+      }
+    </script> -->
 
 </body>
 
