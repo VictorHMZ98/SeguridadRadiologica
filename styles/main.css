@@ -265,7 +265,7 @@ li{
     }
 }
 
-@media (max-width: 640px){
+@media (max-width: 600px){
  h1{
     font-family: 'Raleway', sans-serif;
     color: var(--negro);
@@ -305,6 +305,9 @@ li{
     height: 20vh;
 }
 }
+
+
+
 @media (max-width: 992px) {
 
     .nav-ba{
@@ -326,6 +329,11 @@ li{
         background-color: white!important;
         z-index: 8!important;
     }
+
+    .container-img-bios{
+        height: 60vw;
+    }
+
 
 }
 
