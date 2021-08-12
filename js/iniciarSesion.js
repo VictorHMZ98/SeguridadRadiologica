@@ -124,7 +124,7 @@ function validateForm(e){//validateForm
 
 form.addEventListener('submit',validateForm)
 
-function nuevoProducto(evento){
+function nuevoProducto(){
   
   console.log(valid);
   //evento.preventDefault()
