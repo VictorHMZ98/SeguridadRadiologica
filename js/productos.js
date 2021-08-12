@@ -1,157 +1,167 @@
-let pruebaJson = [
-    {
-      "imagen": "../img/products/img-product_1.jpg",
-      "titulo": "Mandil emplomado económico",
-      "marca": "Marca Slim Royal",
-      "modelo": "E6995",
-      "li1": "0.5mm de plomo",
-      "li2": "66x95 cm",
-      "li3": "Con bolsillo",
-      "li4": "Acabado textil",
-      "descripcion" : "0.5mm de plomo,66x95 cm,Con bolsillo,Acabado textil",
-      "id": "1"
-    },
-    {
-      "imagen": "../img/products/img-product_2.jpg",
-      "titulo": "Mandil emplomado estándar",
-      "marca": "Marca Slim Royal",
-      "modelo": "S6995",
-      "li1": "0.5mm de plomo",
-      "li2": "66x95 cm",
-      "li3": "Con bolsillo",
-      "li4": "Acabado plástico",
-      "descripcion" : "0.5mm de plomo,66x95 cm,Con bolsillo,Acabado plástico",
-      "id": "2"
-    },
-    {
-      "imagen": "../img/products/img-product_3.jpg",
-      "titulo": "Faldón emplomado",
-      "marca": "Marca Slim Royale",
-      "modelo": "SQUARE",
-      "li1": "0.5mm de plomo",
-      "li2": "40x40 cm",
-      "li3": "Tipo falda",
-      "li4": "<br>",
-      "descripcion" : "0.5mm de plomo,40x40 cm,Tipo falda",
-      "id": "3"
-    },
-    {
-      "imagen": "../img/products/img-product_4.jpg",
-      "titulo": "Lentes emplomados",
-      "marca": "Marca Slim Royale",
-      "modelo": "SS-53",
-      "li1": "0.55mm de plomo",
-      "li2": "Con estuche",
-      "li3": "<br>",
-      "li4": " <br>",
-      "descripcion" : "0.55mm de plomo,Con estuche",
-      "id": "4"
-    },
-    {
-      "imagen": "../img/products/img-product_5.jpg",
-      "titulo": "Lentes emplomados",
-      "marca": "Marca Slim Royale",
-      "modelo": "S-53",
-      "li1": "0.5mm de plomo",
-      "li2": "Con estuche",
-      "li3": " <br>",
-      "li4": "<br> ",
-      "descripcion" : "0.5mm de plomo,Con estuche",
-      "id": "5"
-    },
-    {
-      "imagen": "../img/products/img-product_6.jpg",
-      "titulo": "Googles emplomados",
-      "marca": "Marca Slim Royale",
-      "modelo": "GOOGLE-HO",
-      "li1": "0.5mm de plomo",
-      "li2": "Con bolsa de tela",
-      "li3": " <br>",
-      "li4": "<br> ",
-      "descripcion" : "0.5mm de plomo,Con bolsa de tela",
-      "id": "6"
-    },
-    {
-      "imagen": "../img/products/img-product_7.jpg",
-      "titulo": "Guantes emplomados",
-      "marca": "Marca Slim Royale",
-      "modelo": "100 M/L",
-      "li1": "0.5mm de plomo",
-      "li2": "350mm de largo",
-      "li3": "Tamaño mediano o grande",
-      "li4": "<br> ",
-      "descripcion" : "0.5mm de plomo,350mm de largo,Tamaño mediano o grande",
-      "id": "7"
-    },
-    {
-      "imagen": "../img/products/img-product_8.jpg",
-      "titulo": "Guantes emplomados",
-      "marca": "Marca Shielding",
-      "modelo": "XR47",
-      "li1": "RADIAXON",
-      "li2": "Equivalente a 0.5mm de plomo",
-      "li3": "Tamaño mediano o grande",
-      "li4": "",
-      "descripcion" : "RADIAXON,Equivalente a 0.5mm,    de plomo,Tamaño mediano o grande",
-      "id": "8"
-    },
-    {
-      "imagen": "../img/products/img-product_9.jpg",
-      "titulo": "Collarín emplomado",
-      "marca": "Marca Slim Royale",
-      "modelo": "STANDAR-O5",
-      "li1": "0.5mm de plomo",
-      "li2": "<br> ",
-      "li3": "<br> ",
-      "li4": "<br> ",
-      "descripcion" : "0.5mm de plomo",
-      "id": "9"
-    },
-    {
-      "imagen": "../img/products/img-product_10.jpg",
-      "titulo": "Collarín emplomado de lujo",
-      "marca": "Marca Slim Royale",
-      "modelo": "DELUX-O5",
-      "li1": "0.5mm de plomo",
-      "li2": "<br> ",
-      "li3": "<br> ",
-      "li4": "<br> ",
-      "descripcion" : "0.5mm de plomo",
-      "id": "10"
-    },
-    {
-      "imagen": "../img/products/img-product_11.jpg",
-      "titulo": "Protectores de gónadas",
-      "marca": "Marca Slim Royale",
-      "modelo": "S806A",
-      "li1": "0.5mm de plomo",
-      "li2": "Juego de 3 protectores: grande mediano y chico",
-      "li3": "<br>",
-      "li4": "<br>",
-      "descripcion" : "0.5mm de plomo,Juego de 3 protectores,    grande mediano y chico",
-      "id": "11"
-    },
-    {
-      "imagen": "../img/products/img-product_12.jpg",
-      "titulo": "Protectores de gónadas",
-      "marca": "Marca Slim Royale",
-      "modelo": "S806 M/L",
-      "li1": "0.5mm de plomo",
-      "li2": "Una pieza",
-      "li3": "Tamaño mediano o grande",
-      "li4": " <br>",
-      "descripcion" : "0.5mm de plomo,Una pieza,Tamaño mediano o grande",
-      "id": "12"
-    }
-  ]
+// Esto añade al local storage las key-values
+let prueba = [
+  {
+    "imagen": "../img/products/img-product_1.jpg",
+    "titulo": "Mandil emplomado económico",
+    "marca": "Marca Slim Royal",
+    "modelo": "E6995",
+    "li1": "0.5mm de plomo",
+    "li2": "66x95 cm",
+    "li3": "Con bolsillo",
+    "li4": "Acabado textil",
+    "descripcion" : "0.5mm de plomo,66x95 cm,Con bolsillo,Acabado textil",
+    "id": "1"
+  },
+  {
+    "imagen": "../img/products/img-product_2.jpg",
+    "titulo": "Mandil emplomado estándar",
+    "marca": "Marca Slim Royal",
+    "modelo": "S6995",
+    "li1": "0.5mm de plomo",
+    "li2": "66x95 cm",
+    "li3": "Con bolsillo",
+    "li4": "Acabado plástico",
+    "descripcion" : "0.5mm de plomo,66x95 cm,Con bolsillo,Acabado plástico",
+    "id": "2"
+  },
+  {
+    "imagen": "../img/products/img-product_3.jpg",
+    "titulo": "Faldón emplomado",
+    "marca": "Marca Slim Royale",
+    "modelo": "SQUARE",
+    "li1": "0.5mm de plomo",
+    "li2": "40x40 cm",
+    "li3": "Tipo falda",
+    "li4": "<br>",
+    "descripcion" : "0.5mm de plomo,40x40 cm,Tipo falda",
+    "id": "3"
+  },
+  {
+    "imagen": "../img/products/img-product_4.jpg",
+    "titulo": "Lentes emplomados",
+    "marca": "Marca Slim Royale",
+    "modelo": "SS-53",
+    "li1": "0.55mm de plomo",
+    "li2": "Con estuche",
+    "li3": "<br>",
+    "li4": " <br>",
+    "descripcion" : "0.55mm de plomo,Con estuche",
+    "id": "4"
+  },
+  {
+    "imagen": "../img/products/img-product_5.jpg",
+    "titulo": "Lentes emplomados",
+    "marca": "Marca Slim Royale",
+    "modelo": "S-53",
+    "li1": "0.5mm de plomo",
+    "li2": "Con estuche",
+    "li3": " <br>",
+    "li4": "<br> ",
+    "descripcion" : "0.5mm de plomo,Con estuche",
+    "id": "5"
+  },
+  {
+    "imagen": "../img/products/img-product_6.jpg",
+    "titulo": "Googles emplomados",
+    "marca": "Marca Slim Royale",
+    "modelo": "GOOGLE-HO",
+    "li1": "0.5mm de plomo",
+    "li2": "Con bolsa de tela",
+    "li3": " <br>",
+    "li4": "<br> ",
+    "descripcion" : "0.5mm de plomo,Con bolsa de tela",
+    "id": "6"
+  },
+  {
+    "imagen": "../img/products/img-product_7.jpg",
+    "titulo": "Guantes emplomados",
+    "marca": "Marca Slim Royale",
+    "modelo": "100 M/L",
+    "li1": "0.5mm de plomo",
+    "li2": "350mm de largo",
+    "li3": "Tamaño mediano o grande",
+    "li4": "<br> ",
+    "descripcion" : "0.5mm de plomo,350mm de largo,Tamaño mediano o grande",
+    "id": "7"
+  },
+  {
+    "imagen": "../img/products/img-product_8.jpg",
+    "titulo": "Guantes emplomados",
+    "marca": "Marca Shielding",
+    "modelo": "XR47",
+    "li1": "RADIAXON",
+    "li2": "Equivalente a 0.5mm de plomo",
+    "li3": "Tamaño mediano o grande",
+    "li4": "",
+    "descripcion" : "RADIAXON,Equivalente a 0.5mm,    de plomo,Tamaño mediano o grande",
+    "id": "8"
+  },
+  {
+    "imagen": "../img/products/img-product_9.jpg",
+    "titulo": "Collarín emplomado",
+    "marca": "Marca Slim Royale",
+    "modelo": "STANDAR-O5",
+    "li1": "0.5mm de plomo",
+    "li2": "<br> ",
+    "li3": "<br> ",
+    "li4": "<br> ",
+    "descripcion" : "0.5mm de plomo",
+    "id": "9"
+  },
+  {
+    "imagen": "../img/products/img-product_10.jpg",
+    "titulo": "Collarín emplomado de lujo",
+    "marca": "Marca Slim Royale",
+    "modelo": "DELUX-O5",
+    "li1": "0.5mm de plomo",
+    "li2": "<br> ",
+    "li3": "<br> ",
+    "li4": "<br> ",
+    "descripcion" : "0.5mm de plomo",
+    "id": "10"
+  },
+  {
+    "imagen": "../img/products/img-product_11.jpg",
+    "titulo": "Protectores de gónadas",
+    "marca": "Marca Slim Royale",
+    "modelo": "S806A",
+    "li1": "0.5mm de plomo",
+    "li2": "Juego de 3 protectores: grande mediano y chico",
+    "li3": "<br>",
+    "li4": "<br>",
+    "descripcion" : "0.5mm de plomo,Juego de 3 protectores,    grande mediano y chico",
+    "id": "11"
+  },
+  {
+    "imagen": "../img/products/img-product_12.jpg",
+    "titulo": "Protectores de gónadas",
+    "marca": "Marca Slim Royale",
+    "modelo": "S806 M/L",
+    "li1": "0.5mm de plomo",
+    "li2": "Una pieza",
+    "li3": "Tamaño mediano o grande",
+    "li4": " <br>",
+    "descripcion" : "0.5mm de plomo,Una pieza,Tamaño mediano o grande",
+    "id": "12"
+  }
+]
+window.localStorage.setItem('productosLocalS',JSON.stringify(prueba))
+// fin de añadir a local storage 
 
-  function searchOnDatabase(idProductos) {
-    const productoFitrado = arregloProductos.find(producto => {
-        return producto.id == parseInt(idProductos)
-    })
-    console.log(productoFitrado)
-    return productoFitrado;
+function searchOnDatabase(idProductos) {
+  const productoFitrado = arregloProductos.find(producto => {
+      return producto.id == parseInt(idProductos)
+  })
+  console.log(productoFitrado)
+  return productoFitrado;
 }
+
+
+// Cambio a uso del local storage para trabajar con el JSON
+
+let almacenLocal = JSON.parse(window.localStorage.getItem("productosLocalS")) // Extraje la información que almacené en local storage
+
+
 function anadirProducto(productos){
 
     const ancla = document.getElementById("productos");
@@ -186,7 +196,7 @@ function anadirProducto(productos){
     ancla.innerHTML = plantilla;
 
 } //Fin del anadirProducto
-anadirProducto(pruebaJson);
+anadirProducto(almacenLocal);
 
 // Función boton pop up
 const botonClase = document.getElementsByClassName("btn-add-car");
@@ -203,7 +213,10 @@ for(i=0 ; i < botonClase.length ; i++){
 } // fin del for
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 205acbaf36c67e0207ec2cdf3857e4d25825fded
 function listaElementos(json){
   let descr,spl,myDiv;
   for( i = 0 ; i < json.length ; i++ ){
@@ -218,6 +231,12 @@ function listaElementos(json){
       myDiv.innerHTML +="<br/>"
     }// else       
   }//for j
+<<<<<<< HEAD
 }// for i
 }// function listaElementos
+listaElementos(almacenLocal);
+=======
+}
+}
 listaElementos(pruebaJson);
+>>>>>>> 205acbaf36c67e0207ec2cdf3857e4d25825fded
