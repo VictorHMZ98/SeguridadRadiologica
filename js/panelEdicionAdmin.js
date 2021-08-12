@@ -5,10 +5,11 @@ let form = document.getElementById('needs-validation');
 //1. Leyendo el listado actual de clases elemento.classList
 //2. Agrego un estilo elemento.classList.add('nuevaClase')
 //3. Elemento elemento.value
+
 let valid = 0;
-function validateForm(e){//validateForm
+function validateForm(){//validateForm
     //No ejecutes
-    e.preventDefault();
+    // e.preventDefault();
     let inputProduct = document.getElementById('product');
     let inputMarca = document.getElementById('marca');
     let inputModel = document.getElementById('model');
@@ -128,11 +129,41 @@ function validateForm(e){//validateForm
     validateDescription(inputDescription.value)
 
     if (valid==4){
-      console.log('Done');
+      console.log('Done')
     }
     return valid = 0;
 }//validateForm
 
 //Eventos
 
-form.addEventListener('submit',validateForm)
+// form.addEventListener('submit',validateForm)
+
+
+// Función para agregar un producto nuevo...
+
+function nuevoProducto(evento){
+  
+  evento.preventDefault()
+  let inputProduct = document.getElementById('product').value;
+  let inputMarca = document.getElementById('marca').value;
+  let inputModel = document.getElementById('model').value;
+  let inputDescription = document.getElementById('description').value;
+  let inputImage = document.getElementById('image').value;
+
+  // Aquí se "hace JSON" los valores que puso el admin en añadir producto
+  const caracteristicasProducto = {
+    "imagen": inputImage,
+    "titulo" : inputProduct, 
+    "marca": inputMarca,
+    "modelo" : inputModel,
+    "descripcion" : inputDescription,
+    "id" : 99 // valor de prueba
+  }
+
+  let traerLocalStorage = JSON.parse(window.localStorage.getItem("productosLocalS")) // Me traigo la base de datos
+  console.log(traerLocalStorage) // La veo en consola para tener una referencia
+  traerLocalStorage.push(caracteristicasProducto) // Como la base es un array, le hago push
+  console.log(traerLocalStorage) // La veo y comparo
+  window.localStorage.setItem("productosLocalS",JSON.stringify(traerLocalStorage)) // Reenvío la información a la base de datos
+
+}
