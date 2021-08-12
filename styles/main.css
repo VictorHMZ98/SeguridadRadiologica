@@ -363,3 +363,8 @@ input[type=number] {
     margin: 20px;
     width: 100%;
 }
+
+.form-contrasena-olvidada{
+    color: var(--gris);
+    text-decoration: underline;
+}
