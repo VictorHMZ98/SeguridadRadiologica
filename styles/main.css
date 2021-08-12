@@ -356,3 +356,9 @@ input[type=number] {
     padding: 10px;
     margin: auto;
 }
+
+.btn-add{
+    border: 2px solid var(--negro);
+    margin: 20px;
+    width: 100%;
+}
