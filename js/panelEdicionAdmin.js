@@ -39,7 +39,6 @@ function validateForm(e){//validateForm
     
     validateName(inputProduct.value)
     
-    
     function validateMarca(marca){//validateMarca
       //let expReg= /^[A-Z]+$/;
       let expReg = new RegExp(/^[-a-zA-Z-á-ú-0-9. ]+$/)
@@ -106,9 +105,6 @@ function validateForm(e){//validateForm
     //   img.onload
     // }//ValidateImage
 
-
-
-
     function validateDescription(description){//validateDescription
       //let expReg= /^[A-Z]+$/;
       let expReg = new RegExp(/^[-a-zA-Z-á-ú-0-9.| ]+$/)
@@ -129,6 +125,7 @@ function validateForm(e){//validateForm
 
     if (valid==4){
       console.log('Done');
+      nuevoProducto();
     }
     return valid = 0;
 }//validateForm
@@ -136,3 +133,33 @@ function validateForm(e){//validateForm
 //Eventos
 
 form.addEventListener('submit',validateForm)
+
+// Función para agregar un producto nuevo...
+
+function nuevoProducto(evento){
+  
+  console.log(valid);
+  //evento.preventDefault()
+  let inputProduct = document.getElementById('product').value;
+  let inputMarca = document.getElementById('marca').value;
+  let inputModel = document.getElementById('model').value;
+  let inputDescription = document.getElementById('description').value;
+  let inputImage = document.getElementById('image').value;
+
+  // Aquí se "hace JSON" los valores que puso el admin en añadir producto
+  const caracteristicasProducto = {
+    "imagen": inputImage,
+    "titulo" : inputProduct, 
+    "marca": inputMarca,
+    "modelo" : inputModel,
+    "descripcion" : inputDescription,
+    "id" : 99 // valor de prueba
+  }
+
+  let traerLocalStorage = JSON.parse(window.localStorage.getItem("productosLocalS")) // Me traigo la base de datos
+  console.log(traerLocalStorage) // La veo en consola para tener una referencia
+  traerLocalStorage.push(caracteristicasProducto) // Como la base es un array, le hago push
+  console.log(traerLocalStorage) // La veo y comparo
+  window.localStorage.setItem("productosLocalS",JSON.stringify(traerLocalStorage)) // Reenvío la información a la base de datos
+
+}
