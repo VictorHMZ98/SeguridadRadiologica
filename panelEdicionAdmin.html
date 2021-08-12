@@ -145,10 +145,16 @@
                                 <textarea class="form-control" name="description" id="description" rows="3"
                                     maxlength="280" placeholder="Detalle 1 | Detalle 2 | Detalle 3 | Detalle 4"></textarea>
                             </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Visible en el catálogo
+                                </label>
+                            </div>
+                            <br />
+                            <button type="submit" class="btn btn-info">Guardar</button>
+                            <button type="submit" class="btn btn-secondary">Cancelar</button>
 
-                            <button type="submit" class="btn btn-info">Publicar</button>
-
-                            <button type="button" class="btn btn-danger">Desactivar</button>
                         </form>
                         <!--Formulario de edición-->
                     </div>
@@ -168,8 +174,21 @@
                         </li>
                     </ul>
                 </div>
+
+                <br>
+
                 <!-- Container  de productos-->
-                <div class="container div-centered">
+                <div class="container">
+                <!-- Card botón de añadir producto -->
+                <div class="d-grid gap-2 col-12 mx-auto">
+                    <button  class="btn btn-light btn-add" type="button">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                      </svg>  Añadir producto </button>
+                  </div> 
+                  <br>
+                <!-- Termina Card botón de añadir producto -->
+
                     <div class="row" id="productos">
                     </div>
                 </div>
@@ -251,7 +270,6 @@
         crossorigin="anonymous"></script>
     <script src="./js/panelEdicionAdmin.js"></script>
     <script src="./js/productos.js"></script>
-    <script src="./js/servicios.js"></script>
     <script src="./js/irArriba.js"></script>
     <!-- <script type="text/javascript">
     function ValidarTamaño(obj){

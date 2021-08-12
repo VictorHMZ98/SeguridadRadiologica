@@ -110,7 +110,8 @@
 
                                 <label for="validationCustom01">Párrafo de presentación</label>
                                 <textarea type="text" name="product" class="form-control" id="product" maxlength="300"
-                                    required rows="2" placeholder="Este párrafo es obligatorio, siempre será visible"></textarea>
+                                    required rows="2"
+                                    placeholder="Este párrafo es obligatorio, siempre será visible"></textarea>
                                 <div class="invalid-feedback">
                                     <!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
                                     Marca válido es requerido
@@ -122,7 +123,7 @@
 
                                 <label for="validationCustom01">Párrafo 2: </label>
                                 <textarea type="text" name="product" class="form-control" id="product" maxlength="300"
-                                rows="2" placeholder="Párrafo opcional" required></textarea>
+                                    rows="2" placeholder="Párrafo opcional" required></textarea>
                                 <div class="invalid-feedback">
                                     <!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
                                     Nombre válido es requerido
@@ -141,12 +142,12 @@
                                 </div>
                             </div>
 
-                            
+
                             <div class="form-group">
 
                                 <label for="validationCustom01">Párrafo Resaltado: </label>
                                 <textarea type="text" name="product" class="form-control" id="product" maxlength="300"
-                                    required  rows="2" placeholder="Información resaltada"></textarea>
+                                    required rows="2" placeholder="Información resaltada"></textarea>
                                 <div class="invalid-feedback">
                                     <!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
                                     Nombre válido es requerido
@@ -160,31 +161,48 @@
                                     accept=".jpeg,.jpg,.png">
                             </div>
 
-                            <button type="submit" class="btn btn-info">Publicar</button>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Visible en el catálogo
+                                </label>
+                            </div>
+                            <br />
 
-                            <button type="button" class="btn btn-danger">Desactivar</button>
+                            <button type="submit" class="btn btn-info">Guardar</button>
+                            <button type="submit" class="btn btn-secondary">Cancelar</button>
+
                         </form>
                         <!--Formulario de edición-->
                     </div>
                 </div>
                 <!-- termina Panel de edición  -->
-
-
             </div>
             
             <div class="col-8">
                 <div class="row">
                     <ul class="nav nav-pills nav-fill" style=" width: 700px;">
                         <li class="nav-item">
-                            <a class="nav-link bg-light text-dark" aria-current="page" href="panelEdicionAdmin.html">Productos</a>
+                            <a class="nav-link bg-light text-dark" aria-current="page"
+                                href="panelEdicionAdmin.html">Productos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="panelEdicionAdminServicios.html">Servicios</a>
                         </li>
                     </ul>
                 </div>
-                
+                <br>
                 <!-- Container de servicios-->
+                <!-- Card botón de añadir producto -->
+                <div class="d-grid gap-2 col-12 mx-auto">
+                    <button class="btn btn-light btn-add" type="button"> <svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path
+                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                        </svg> Añadir servicio </button>
+                </div>
+                <!-- Termina Card botón de añadir producto -->
                 <br>
                 <div class="container">
                     <div class="col-2"></div>
@@ -270,10 +288,8 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
     <script src="./js/panelEdicionAdmin.js"></script>
-    <script src="./js/productos.js"></script>
     <script src="./js/servicios.js"></script>
     <script src="./js/irArriba.js"></script>
 
 </body>
-
 </html>
