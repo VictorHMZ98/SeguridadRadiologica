@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/logo/logo.svg">
 
     <!-- Font families-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,7 +85,7 @@
         </div>
 
         <div class="row">
-            <div class="col-4">
+            <div class="col-xl-4 col-md-4 col-xs-8">
                 <!-- Panel de edición  -->
                 <div class="container">
                     <div class="adminForm">
@@ -94,7 +93,7 @@
                         <h4>Panel de edición</h4>
 
 
-                        <form id="needs-validation" style="margin-bottom: 20px;" novalidate>
+                        <form action="#" id="needs-validation" style="margin-bottom: 20px;" method="POST" novalidate>
                             <!--Formulario de edición-->
                             <div class="form-group">
 
@@ -111,12 +110,12 @@
                             <div class="form-group">
 
                                 <label for="validationCustom01">Marca:</label>
-                                <input type="text" name="product" class="form-control" id="product" maxlength="31"
+                                <input type="text" name="marca" class="form-control" id="marca" maxlength="31"
                                     required>
 
                                 <div class="invalid-feedback">
                                     <!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
-                                    Marca válido es requerido
+                                    Marca válida es requerida
                                 </div>
                             </div>
 
@@ -124,37 +123,32 @@
                             <div class="form-group">
 
                                 <label for="validationCustom01">Modelo: </label>
-                                <input type="text" name="product" class="form-control" id="product" maxlength="31"
+                                <input type="text" name="model" class="form-control" id="model" maxlength="31"
                                     required>
 
                                 <div class="invalid-feedback">
                                     <!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
-                                    Nombre válido es requerido
+                                    Modelo válido es requerido
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="image">Selecciona una imagen (.jpeg,.jpg,.png)</label>
-                                <input type="file" class="form-control-file" name="image" id="image"
-                                    accept=".jpeg,.jpg,.png">
+                                <input type="file" class="form-control-file" name="image" id="image" accept=".jpeg,.jpg,.png">
+                                <!-- <input type="file" class="form-control-file" name="image" id="image" accept=".jpeg,.jpg,.png" onchange="ValidarTamaño(this);"> -->
+
                             </div>
 
 
                             <div class="form-group">
-                                <label for="notas">Descripción: </label>
-                                <textarea class="form-control" name="notas" id="notas" rows="3"
-                                    maxlength="280"></textarea>
+                                <label for="validationCustom01">Descripción: </label>
+                                <textarea class="form-control" name="description" id="description" rows="3"
+                                    maxlength="280" placeholder="Detalle 1 | Detalle 2 | Detalle 3 | Detalle 4"></textarea>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Visible en el catálogo
-                                </label>
-                            </div>
-                            <br />
-                            <button type="submit" class="btn btn-info">Guardar</button>
-                            <button type="submit" class="btn btn-secondary">Cancelar</button>
 
+                            <button type="submit" class="btn btn-info">Publicar</button>
+
+                            <button type="button" class="btn btn-danger">Desactivar</button>
                         </form>
                         <!--Formulario de edición-->
                     </div>
@@ -174,21 +168,8 @@
                         </li>
                     </ul>
                 </div>
-
-                <br>
-
                 <!-- Container  de productos-->
-                <div class="container">
-                <!-- Card botón de añadir producto -->
-                <div class="d-grid gap-2 col-12 mx-auto">
-                    <button  class="btn btn-light btn-add" type="button">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
-                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
-                      </svg> Recargar lista de productos </button>
-                  </div> 
-                  <br>
-                <!-- Termina Card botón de añadir producto -->
-
+                <div class="container div-centered">
                     <div class="row" id="productos">
                     </div>
                 </div>
@@ -257,7 +238,7 @@
         <!-- Copyright -->
         <div class="text-center p-3 footer-link-copyright" style="background-color: rgba(0, 0, 0, 0.2)">
             COPYRIGHT © RADIOMED 2021
-            <div class="text-right footer-link-copyright" style="text-align: right;">AVISO DE PRIVACIDAD</div>
+            <div class="text-right" style="text-align: right;">AVISO DE PRIVACIDAD</div>
         </div>
         <!-- Copyright -->
     </footer>
@@ -270,7 +251,23 @@
         crossorigin="anonymous"></script>
     <script src="./js/panelEdicionAdmin.js"></script>
     <script src="./js/productos.js"></script>
+    <!-- <script src="./js/servicios.js"></script> -->
     <script src="./js/irArriba.js"></script>
+    <!-- <script type="text/javascript">
+    function ValidarTamaño(obj){
+      var uploadFile = obj.files[0];
+     
+      var img = new Image();
+      img.onload = function (){
+          if (this.width.toFixed(0) != 413 && this.height.toFixed(0) != 531){
+                alert("La imagen debe ser de tamaño 413px por 531px.");
+                $('#foto').val("");
+          }
+          
+          };
+      img.src = URL.createObjectURL(uploadFile);
+      }
+    </script> -->
 
 </body>
 
