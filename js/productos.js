@@ -213,7 +213,10 @@ for(i=0 ; i < botonClase.length ; i++){
 } // fin del for
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 205acbaf36c67e0207ec2cdf3857e4d25825fded
 function listaElementos(json){
   let descr,spl,myDiv;
   for( i = 0 ; i < json.length ; i++ ){
@@ -228,6 +231,12 @@ function listaElementos(json){
       myDiv.innerHTML +="<br/>"
     }// else       
   }//for j
+<<<<<<< HEAD
 }// for i
 }// function listaElementos
 listaElementos(almacenLocal);
+=======
+}
+}
+listaElementos(pruebaJson);
+>>>>>>> 205acbaf36c67e0207ec2cdf3857e4d25825fded
