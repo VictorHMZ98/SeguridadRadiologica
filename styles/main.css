@@ -3,6 +3,7 @@
     --negro: #303030;
     --gris: #b6b6b6;
 }
+
 body{
     display: contents;
 }
@@ -21,8 +22,7 @@ h1{
 
 h2{
     font-family: "Raleway";
-    font-size: 45px;
-    color: var(--azul);
+    font-size: 40px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -156,7 +156,6 @@ li{
     width: 36vw;
     height: 380px;
     object-fit: cover;
-
 }
 
 .row{
@@ -283,11 +282,7 @@ li{
     visibility: collapse;
 } */
 
-.container-img-bios{
-    width: 100%;
-    object-fit: cover;
-    height: 90vw;
-}
+
 
 .container-img-square{
     width: 100%;
@@ -331,9 +326,15 @@ li{
     }
 
     .container-img-bios{
+        width: 100%;
+        object-fit: cover;
         height: 60vw;
     }
 
+    .container-img-square{
+        width: 100%;
+        height : auto;
+    }
 
 }
 
