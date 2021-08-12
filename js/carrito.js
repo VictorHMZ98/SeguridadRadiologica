@@ -1,4 +1,3 @@
-
 // Función boton pop up
 window.onload = function () {
     const btnAdd = document.getElementById('btn-orden');
@@ -8,8 +7,7 @@ window.onload = function () {
             title: "ORDEN CREADA",
             text: 'Tu orden ha sido creada, en breve te contactaremos' ,
             position: 'center',
-            type: "success"
-        }).then(okay => {
+         }).then(okay => {
             if (okay) {
                 window.location.href = "./historialPedidos.html";
             }
