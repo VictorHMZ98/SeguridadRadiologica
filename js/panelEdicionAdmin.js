@@ -40,7 +40,6 @@ function validateForm(){//validateForm
     
     validateName(inputProduct.value)
     
-    
     function validateMarca(marca){//validateMarca
       //let expReg= /^[A-Z]+$/;
       let expReg = new RegExp(/^[-a-zA-Z-á-ú-0-9. ]+$/)
@@ -107,9 +106,6 @@ function validateForm(){//validateForm
     //   img.onload
     // }//ValidateImage
 
-
-
-
     function validateDescription(description){//validateDescription
       //let expReg= /^[A-Z]+$/;
       let expReg = new RegExp(/^[-a-zA-Z-á-ú-0-9.| ]+$/)
@@ -129,21 +125,21 @@ function validateForm(){//validateForm
     validateDescription(inputDescription.value)
 
     if (valid==4){
-      console.log('Done')
+      console.log('Done');
+      nuevoProducto();
     }
     return valid = 0;
 }//validateForm
 
 //Eventos
 
-// form.addEventListener('submit',validateForm)
-
+form.addEventListener('submit',validateForm)
 
 // Función para agregar un producto nuevo...
 
 function nuevoProducto(evento){
+  console.log(valid);
   
-  evento.preventDefault()
   let inputProduct = document.getElementById('product').value;
   let inputMarca = document.getElementById('marca').value;
   let inputModel = document.getElementById('model').value;
