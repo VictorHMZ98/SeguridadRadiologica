@@ -265,7 +265,7 @@ li{
     }
 }
 
-@media (max-width: 640px){
+@media (max-width: 600px){
  h1{
     font-family: 'Raleway', sans-serif;
     color: var(--negro);
@@ -305,6 +305,9 @@ li{
     height: 20vh;
 }
 }
+
+
+
 @media (max-width: 992px) {
 
     .nav-ba{
@@ -327,6 +330,11 @@ li{
         z-index: 8!important;
     }
 
+    .container-img-bios{
+        height: 60vw;
+    }
+
+
 }
 
 /* FORMULARIO DE CONTACTO Chrome, Safari, Edge, Opera */
@@ -347,4 +355,10 @@ input[type=number] {
     border-radius: 10px;
     padding: 10px;
     margin: auto;
+}
+
+.btn-add{
+    border: 2px solid var(--negro);
+    margin: 20px;
+    width: 100%;
 }
