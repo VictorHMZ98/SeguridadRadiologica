@@ -212,7 +212,6 @@ for(i=0 ; i < botonClase.length ; i++){
   })//addEventListener 
 } // fin del for
 
-
 function listaElementos(json){
   let descr,spl,myDiv;
   for( i = 0 ; i < json.length ; i++ ){
