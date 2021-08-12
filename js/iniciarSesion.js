@@ -77,7 +77,7 @@ function validateForm(e){//validateForm
     validateEmail(inputEmail.value)
 
     function validatePassword(password){//validatePassword
-      let expReg = new RegExp(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[$@!%?&]).{6,12}$/);
+      let expReg = new RegExp(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[/$@*#!%?&._-]).{6,12}$/);
       let esValido = expReg.test(password);
       console.log(esValido);
       if(esValido == true ){//if email 
@@ -113,7 +113,9 @@ function validateForm(e){//validateForm
 
 
     if (valid==6){
-      window.open('mailto:generation.c2.cdmxe3@gmail.com?subject=Contacto&body=body');
+      //window.open('mailto:generation.c2.cdmxe3@gmail.com?subject=Contacto&body=body');
+      console.log('Done')
+      nuevoProducto();
     }
     return valid = 0;
 }//validateForm
@@ -121,4 +123,34 @@ function validateForm(e){//validateForm
 //Eventos
 
 form.addEventListener('submit',validateForm)
+
+function nuevoProducto(evento){
+  
+  console.log(valid);
+  //evento.preventDefault()
+  let inputNombre = document.getElementById('name').value;
+  let inputApellidos = document.getElementById('lastName').value;
+  let inputEmail = document.getElementById('email').value;
+  let inputPhone = document.getElementById('phone').value;
+  let inputContraseña = document.getElementById('password').value;
+  let inputConfirmarContraseña = document.getElementById('confirmPassword').value;
+  
+  // Aquí se "hace JSON" los valores que puso el admin en añadir producto
+  const caracteristicasProducto = {
+   
+    "Nombre" : inputNombre, 
+    "Apellido" : inputApellidos,
+    "Email" : inputEmail,
+    "Telefono" : inputPhone,
+    "Contraseña" : inputContraseña,
+    "ConfirmaContraseña" : inputConfirmarContraseña
+  }
+
+  let traerLocalStorage = JSON.parse(window.localStorage.getItem("productosLocalS")) // Me traigo la base de datos
+  console.log(traerLocalStorage) // La veo en consola para tener una referencia
+  traerLocalStorage.push(caracteristicasProducto) // Como la base es un array, le hago push
+  console.log(traerLocalStorage) // La veo y comparo
+  window.localStorage.setItem("productosLocalS",JSON.stringify(traerLocalStorage)) // Reenvío la información a la base de datos
+
+}
 

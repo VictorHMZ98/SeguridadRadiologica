@@ -220,4 +220,4 @@ function listaElementos(json){
   }//for j
 }// for i
 }// function listaElementos
-listaElementos(pruebaJson);
+listaElementos(almacenLocal);
