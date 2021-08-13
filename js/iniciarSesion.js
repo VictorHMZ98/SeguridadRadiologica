@@ -51,6 +51,7 @@ function validateForm(e){//validateForm
     if (valid==6){
       //window.open('mailto:generation.c2.cdmxe3@gmail.com?subject=Contacto&body=body');
       console.log('Done')
+      // iniciarSesion()
     }
     return vaid = 0;
 }//validateForm
@@ -58,3 +59,31 @@ function validateForm(e){//validateForm
 //Eventos
 
 form.addEventListener('submit',validateForm)
+
+/* Intento de funcion para la tarea.. 8
+function iniciarSesion(){
+
+  let inputEmail = document.getElementById('emailIniciar').value;
+  let inputContraseña = document.getElementById('passwordIniciar').value;
+  
+  console.log(inputEmail)
+
+  var comparacionBD = JSON.parse(window.localStorage.getItem("nuevoRegistro"))
+
+  for( i = 0 ; i < comparacionBD.length ; i++){
+
+    if( comparacionBD[i].email == inputEmail ){
+        console.log("Entre al primer if")
+        if( comparacionBD[i].contrasena == inputContraseña ){
+          console.log("¡Contraseña correcta!")
+          break
+        } else {
+          console.log("Contraseña o correo incorrecto")
+        } // if para comparar las contraseñas
+
+    } else {
+      continue
+    } // if para encontrar, o no, el correo
+  }
+
+} Att Carlos */
