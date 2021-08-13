@@ -5,11 +5,10 @@ let form = document.getElementById('needs-validation');
 //1. Leyendo el listado actual de clases elemento.classList
 //2. Agrego un estilo elemento.classList.add('nuevaClase')
 //3. Elemento elemento.value
-
 let valid = 0;
-function validateForm(){//validateForm
+function validateForm(e){//validateForm
     //No ejecutes
-    // e.preventDefault();
+    e.preventDefault();
     let inputProduct = document.getElementById('product');
     let inputMarca = document.getElementById('marca');
     let inputModel = document.getElementById('model');
@@ -138,8 +137,9 @@ form.addEventListener('submit',validateForm)
 // Función para agregar un producto nuevo...
 
 function nuevoProducto(evento){
-  console.log(valid);
   
+  console.log(valid);
+  //evento.preventDefault()
   let inputProduct = document.getElementById('product').value;
   let inputMarca = document.getElementById('marca').value;
   let inputModel = document.getElementById('model').value;
