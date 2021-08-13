@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/logo/logo.svg">
+
   <!-- Font families-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +28,7 @@
       <nav class="navbar navbar-expand-lg navbar-light navbar-body-background">
         <a class="navbar-brand" href="index.html">
           <!-- Inserto el logo de la empresa-->
-          <img src="./img/logo/logo-horizontal.svg" width="150" class="d-inline-block align-top"
+          <img src="./img/logo/logo-horizontal.svg" width="170" class="d-inline-block align-top"
             alt="Radiomed Seguridad y protección radiológica en diagnóstico médico">
         </a>
 
@@ -109,8 +111,12 @@
                 </div>
                 <div class="form-group">
                   <label for="adress">Dirección del establecimiento de radiodiagnóstico:</label>
-                  <input name="adress" class="form-control" id="adress" maxlength="100" required/>
-              </div>
+                  <input type="text" name="adress" class="form-control" id="adress" maxlength="100" required/>
+                  
+                  <div class="invalid-feedback">
+                    Dirección válida es requerida
+                  </div>
+                </div>
 
 
                   <div class="form-group">
