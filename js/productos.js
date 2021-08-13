@@ -92,7 +92,7 @@ let pruebaJson = [
       "li2": "Equivalente a 0.5mm de plomo",
       "li3": "Tamaño mediano o grande",
       "li4": "",
-      "descripcion" : "RADIAXON,Equivalente a 0.5mm,    de plomo,Tamaño mediano o grande",
+      "descripcion" : "RADIAXON,Equivalente a 0.5mm, de plomo,Tamaño mediano o grande",
       "id": "8"
     },
     {
@@ -128,7 +128,7 @@ let pruebaJson = [
       "li2": "Juego de 3 protectores: grande mediano y chico",
       "li3": "<br>",
       "li4": "<br>",
-      "descripcion" : "0.5mm de plomo,Juego de 3 protectores,    grande mediano y chico",
+      "descripcion" : "0.5mm de plomo,Juego de 3 piezas:, Grande mediano y chico",
       "id": "11"
     },
     {
@@ -161,7 +161,7 @@ function anadirProducto(productos){
 
         let card = `
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 div-centered" style="margin-top:100px;">
-        <div class="card" style="width: 18rem;"> 
+        <div class="card"> 
         <img src="${producto.imagen}" class="card-img-top" alt="..."> 
             <div class="card-body"> 
                 <h4 class="card-title text-center">${producto.titulo}</h4> 
