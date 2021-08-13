@@ -48,12 +48,12 @@ function validateForm(e){//validateForm
 
     validatePassword(inputContraseña.value)
 
-    if (valid==6){
+    if (valid==2){
       //window.open('mailto:generation.c2.cdmxe3@gmail.com?subject=Contacto&body=body');
       console.log('Done')
-      // iniciarSesion()
+      Toast();
     }
-    return vaid = 0;
+    return valid = 0;
 }//validateForm
 
 //Eventos
@@ -62,19 +62,17 @@ form.addEventListener('submit',validateForm)
 
 
 function Toast(){
-
-
-const Toast = Swal.mixin({
-  toast: true,
-  position: 'top-end',
-  showConfirmButton: false,
-  timer: 3000,
-  timerProgressBar: true,
-  didOpen: (toast) => {
-    toast.addEventListener('mouseenter', Swal.stopTimer)
-    toast.addEventListener('mouseleave', Swal.resumeTimer)
-  }
-});
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    } 
+  });
 
 Toast.fire({
   icon: 'success',

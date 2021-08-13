@@ -77,7 +77,7 @@ function validateForm(e){//validateForm
     validateEmail(inputEmail.value)
 
     function validatePassword(password){//validatePassword
-      let expReg = new RegExp(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[$@!%?&]).{6,12}$/);
+      let expReg = new RegExp(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[/$@*#!%?&._-]).{6,12}$/);
       let esValido = expReg.test(password);
       console.log(esValido);
       if(esValido == true ){//if email 
@@ -129,7 +129,7 @@ function nuevoRegistro(evento){
     let inputEmail = document.getElementById('emailRegistrar').value;
     let inputPhone = document.getElementById('phone').value;
     let inputContraseña = document.getElementById('passwordRegistrar').value;
-    let inputConfirmarContraseña = document.getElementById('confirmPassword')   ;
+    let inputConfirmarContraseña = document.getElementById('confirmPassword');
   
     // Aquí se "hace JSON" los valores que puso el admin en añadir producto
     const datosRegistro = {
