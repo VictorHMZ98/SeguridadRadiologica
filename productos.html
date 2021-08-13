@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo/logo.svg">
 
     <!-- Font families-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +24,8 @@
     npm install --save sweetalert2
     npm install --save sweetalert2 @sweetalert2/theme-bulma
     -->
+    <!-- El script de sweet alert debe ir antes del tema  -->
+    <script src="./sweetalert2/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="@sweetalert2/theme-bulma/bulma.css">
 
 
@@ -37,7 +40,7 @@
             <nav class="navbar navbar-expand-lg navbar-light navbar-body-background">
                 <a class="navbar-brand" href="index.html">
                     <!-- Inserto el logo de la empresa-->
-                    <img src="./img/logo/logo-horizontal.svg" width="150" class="d-inline-block align-top"
+                    <img src="./img/logo/logo-horizontal.svg" width="170" class="d-inline-block align-top"
                         alt="Radiomed Seguridad y protección radiológica en diagnóstico médico">
                 </a>
 
@@ -174,7 +177,6 @@
         crossorigin="anonymous"></script>
     <script src="./js/productos.js"></script>
     <script src="./js/irArriba.js"></script>
-    <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 
 </body>
 

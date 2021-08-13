@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo/logo.svg">
 
     <!-- Font families-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,7 +77,7 @@
         </div> <!-- Termina el navbar principal -->
     </div> <!-- Termina el container fluid, hora de alinear todo-->
     <!--Nav bar -->
-    <div class="container contenedor">
+    <div class="container">
 
         <div class="row mt-5">
             <div class="col-12">
@@ -85,21 +86,21 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-md-12 col-lg-4 col-xl-4">
+            <div class="col-xl-4 col-md-4 col-xs-8">
                 <!-- Panel de edición  -->
                 <div class="container">
                     <div class="adminForm">
 
                         <h4>Panel de edición</h4>
 
-                        <form action="#" id="needs-validation" style="margin-bottom: 20px;" method="POST" novalidate>
+
+                        <form id="needs-validation" style="margin-bottom: 20px;" novalidate>
                             <!--Formulario de edición-->
                             <div class="form-group">
 
-                                <label for="validationCustom01">Nombre del producto: </label>
-                                <input type="text" name="product" class="form-control" id="product" maxlength="31"
+                                <label for="validationCustom01">Nombre del servicio: </label>
+                                <input type="text" name="nombre" class="form-control" id="nombre" maxlength="300"
                                     required>
-
                                 <div class="invalid-feedback">
                                     <!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
                                     Nombre válido es requerido
@@ -108,71 +109,108 @@
 
                             <div class="form-group">
 
-                                <label for="validationCustom01">Marca:</label>
-                                <input type="text" name="marca" class="form-control" id="marca" maxlength="31"
-                                    required>
-
+                                <label for="validationCustom01">Párrafo de presentación</label>
+                                <textarea type="text" name="parrafo" class="form-control" id="parrafo" maxlength="300"
+                                    required rows="2"
+                                    placeholder="Este párrafo es obligatorio, siempre será visible"></textarea>
                                 <div class="invalid-feedback">
                                     <!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
-                                    Marca válida es requerida
+                                    Este párrafo es requerido
                                 </div>
                             </div>
 
 
                             <div class="form-group">
 
-                                <label for="validationCustom01">Modelo: </label>
-                                <input type="text" name="model" class="form-control" id="model" maxlength="31"
-                                    required>
-
+                                <label for="validationCustom01">Párrafo 2: </label>
+                                <textarea type="text" name="parrafo2" class="form-control" id="parrafo2" maxlength="300"
+                                    required rows="2" placeholder="Párrafo opcional"></textarea>
                                 <div class="invalid-feedback">
                                     <!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
-                                    Modelo válido es requerido
+                                    Nombre válido es requerido
                                 </div>
                             </div>
+
+
+                            <div class="form-group">
+
+                                <label for="validationCustom01">Párrafo 3: </label>
+                                <textarea type="text" name="parrafo3" class="form-control" id="parrafo3" maxlength="300"
+                                    required rows="2" placeholder="Párrafo opcional"></textarea>
+                                <div class="invalid-feedback">
+                                    <!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
+                                    Nombre válido es requerido
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="validationCustom01">Párrafo Resaltado: </label>
+                                <textarea type="text" name="parrafoRes" class="form-control" id="parrafoRes" maxlength="300"
+                                    required rows="2" placeholder="Información resaltada"></textarea>
+                                <div class="invalid-feedback">
+                                    <!--div de leyenda para validación, controla la leyenda con el invalid/valid-->
+                                    Nombre válido es requerido
+                                </div>
+                            </div>
+
 
                             <div class="form-group">
                                 <label for="image">Selecciona una imagen (.jpeg,.jpg,.png)</label>
-                                <input type="file" class="form-control-file" name="image" id="image" accept=".jpeg,.jpg,.png">
-                                <!-- <input type="file" class="form-control-file" name="image" id="image" accept=".jpeg,.jpg,.png" onchange="ValidarTamaño(this);"> -->
-
+                                <input type="file" class="form-control-file" name="image" id="image"
+                                    accept=".jpeg,.jpg,.png">
                             </div>
 
-
-                            <div class="form-group">
-                                <label for="validationCustom01">Descripción: </label>
-                                <textarea class="form-control" name="description" id="description" rows="3"
-                                    maxlength="280" placeholder="Detalle 1 | Detalle 2 | Detalle 3 | Detalle 4"></textarea>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    Visible en el catálogo
+                                </label>
                             </div>
+                            <br />
 
-                            <button type="submit" class="btn btn-info" >Publicar</button>
+                            <button type="submit" class="btn btn-info">Guardar</button>
+                            <button type="submit" class="btn btn-secondary">Cancelar</button>
 
-                            <button type="button" class="btn btn-danger">Desactivar</button>
                         </form>
                         <!--Formulario de edición-->
                     </div>
                 </div>
                 <!-- termina Panel de edición  -->
-
-
             </div>
-            <div class="col-8 div-centered">
+            
+            <div class="col-8">
                 <div class="row">
-                    <ul class="nav nav-pills nav-fill">
+                    <ul class="nav nav-pills nav-fill" style=" width: 700px;">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="panelEdicionAdmin.html">Productos</a>
+                            <a class="nav-link bg-light text-dark" aria-current="page"
+                                href="panelEdicionAdmin.html">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link bg-light text-dark" href="panelEdicionAdminServicios.html">Servicios</a>
+                            <a class="nav-link active" href="panelEdicionAdminServicios.html">Servicios</a>
                         </li>
                     </ul>
                 </div>
-                <!-- Container  de productos-->
-                <div class="container div-centered">
-                    <div class="row" id="productos">
+                <br>
+                <!-- Container de servicios-->
+                <!-- Card botón de añadir producto -->
+                <div class="d-grid gap-2 col-12 mx-auto">
+                    <button  class="btn btn-light btn-add" type="button">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                      </svg> Recargar lista de servicios </button>
+                </div>
+                <!-- Termina Card botón de añadir producto -->
+                <br>
+                <div class="container">
+                    <div class="col-2"></div>
+                    <div class="col-8"></div>
+                    <div class="row" id="servicios">
                     </div>
                 </div>
-                <!-- termina Container  de productos-->
+                <!-- termina container de servicios -->
+
             </div>
         </div>
     </div>
@@ -237,7 +275,7 @@
         <!-- Copyright -->
         <div class="text-center p-3 footer-link-copyright" style="background-color: rgba(0, 0, 0, 0.2)">
             COPYRIGHT © RADIOMED 2021
-            <div class="text-right" style="text-align: right;">AVISO DE PRIVACIDAD</div>
+            <div class="text-right footer-link-copyright" style="text-align: right;">AVISO DE PRIVACIDAD</div>
         </div>
         <!-- Copyright -->
     </footer>
@@ -248,10 +286,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
-    <script src="./js/panelEdicionAdmin.js"></script>
-    <script src="./js/productos.js"></script>
+    <script src="./js/panelEdicionAdminServicios.js"></script>
+    <script src="./js/servicios.js"></script>
     <script src="./js/irArriba.js"></script>
 
 </body>
-
 </html>

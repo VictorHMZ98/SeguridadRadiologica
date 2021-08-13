@@ -1,4 +1,6 @@
-let pruebaJson = [
+// Esto añade al local storage las key-values
+if( window.localStorage.getItem("productosLocalS") == null ){
+  let prueba = [
     {
       "imagen": "../img/products/img-product_1.jpg",
       "titulo": "Mandil emplomado económico",
@@ -8,7 +10,7 @@ let pruebaJson = [
       "li2": "66x95 cm",
       "li3": "Con bolsillo",
       "li4": "Acabado textil",
-      "descripcion" : "0.5mm de plomo,66x95 cm,Con bolsillo,Acabado textil",
+      "descripcion" : "0.5mm de plomo|66x95 cm|Con bolsillo|Acabado textil",
       "id": "1"
     },
     {
@@ -20,7 +22,7 @@ let pruebaJson = [
       "li2": "66x95 cm",
       "li3": "Con bolsillo",
       "li4": "Acabado plástico",
-      "descripcion" : "0.5mm de plomo,66x95 cm,Con bolsillo,Acabado plástico",
+      "descripcion" : "0.5mm de plomo|66x95 cm|Con bolsillo|Acabado plástico",
       "id": "2"
     },
     {
@@ -32,7 +34,7 @@ let pruebaJson = [
       "li2": "40x40 cm",
       "li3": "Tipo falda",
       "li4": "<br>",
-      "descripcion" : "0.5mm de plomo,40x40 cm,Tipo falda",
+      "descripcion" : "0.5mm de plomo,40x40 cm|Tipo falda",
       "id": "3"
     },
     {
@@ -44,7 +46,7 @@ let pruebaJson = [
       "li2": "Con estuche",
       "li3": "<br>",
       "li4": " <br>",
-      "descripcion" : "0.55mm de plomo,Con estuche",
+      "descripcion" : "0.55mm de plomo|Con estuche",
       "id": "4"
     },
     {
@@ -56,7 +58,7 @@ let pruebaJson = [
       "li2": "Con estuche",
       "li3": " <br>",
       "li4": "<br> ",
-      "descripcion" : "0.5mm de plomo,Con estuche",
+      "descripcion" : "0.5mm de plomo|Con estuche",
       "id": "5"
     },
     {
@@ -68,7 +70,7 @@ let pruebaJson = [
       "li2": "Con bolsa de tela",
       "li3": " <br>",
       "li4": "<br> ",
-      "descripcion" : "0.5mm de plomo,Con bolsa de tela",
+      "descripcion" : "0.5mm de plomo|Con bolsa de tela",
       "id": "6"
     },
     {
@@ -80,7 +82,7 @@ let pruebaJson = [
       "li2": "350mm de largo",
       "li3": "Tamaño mediano o grande",
       "li4": "<br> ",
-      "descripcion" : "0.5mm de plomo,350mm de largo,Tamaño mediano o grande",
+      "descripcion" : "0.5mm de plomo|350mm de largo|Tamaño mediano o grande",
       "id": "7"
     },
     {
@@ -92,7 +94,7 @@ let pruebaJson = [
       "li2": "Equivalente a 0.5mm de plomo",
       "li3": "Tamaño mediano o grande",
       "li4": "",
-      "descripcion" : "RADIAXON,Equivalente a 0.5mm,    de plomo,Tamaño mediano o grande",
+      "descripcion" : "RADIAXON|Equivalente a 0.5mm|de plomo|Tamaño mediano o grande",
       "id": "8"
     },
     {
@@ -128,7 +130,7 @@ let pruebaJson = [
       "li2": "Juego de 3 protectores: grande mediano y chico",
       "li3": "<br>",
       "li4": "<br>",
-      "descripcion" : "0.5mm de plomo,Juego de 3 protectores,    grande mediano y chico",
+      "descripcion" : "0.5mm de plomo,Juego de 3 piezas:|Grande mediano y chico",
       "id": "11"
     },
     {
@@ -140,18 +142,31 @@ let pruebaJson = [
       "li2": "Una pieza",
       "li3": "Tamaño mediano o grande",
       "li4": " <br>",
-      "descripcion" : "0.5mm de plomo,Una pieza,Tamaño mediano o grande",
+      "descripcion" : "0.5mm de plomo|Una pieza|Tamaño mediano o grande",
       "id": "12"
     }
   ]
+  window.localStorage.setItem('productosLocalS',JSON.stringify(prueba))
+} 
 
-  function searchOnDatabase(idProductos) {
-    const productoFitrado = arregloProductos.find(producto => {
-        return producto.id == parseInt(idProductos)
-    })
-    console.log(productoFitrado)
-    return productoFitrado;
+
+
+// fin de añadir a local storage 
+
+function searchOnDatabase(idProductos) {
+  const productoFitrado = arregloProductos.find(producto => {
+      return producto.id == parseInt(idProductos)
+  })
+  console.log(productoFitrado)
+  return productoFitrado;
 }
+
+
+// Cambio a uso del local storage para trabajar con el JSON
+
+let almacenLocal = JSON.parse(window.localStorage.getItem("productosLocalS")) // Extraje la información que almacené en local storage
+
+
 function anadirProducto(productos){
 
     const ancla = document.getElementById("productos");
@@ -161,7 +176,7 @@ function anadirProducto(productos){
 
         let card = `
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 div-centered" style="margin-top:100px;">
-        <div class="card" style="width: 18rem;"> 
+        <div class="card"> 
         <img src="${producto.imagen}" class="card-img-top" alt="..."> 
             <div class="card-body"> 
                 <h4 class="card-title text-center">${producto.titulo}</h4> 
@@ -186,7 +201,7 @@ function anadirProducto(productos){
     ancla.innerHTML = plantilla;
 
 } //Fin del anadirProducto
-anadirProducto(pruebaJson);
+anadirProducto(almacenLocal);
 
 // Función boton pop up
 const botonClase = document.getElementsByClassName("btn-add-car");
@@ -202,13 +217,11 @@ for(i=0 ; i < botonClase.length ; i++){
   })//addEventListener 
 } // fin del for
 
-
-
 function listaElementos(json){
   let descr,spl,myDiv;
   for( i = 0 ; i < json.length ; i++ ){
     let descr = json[i].descripcion;
-    let spl = descr.split(","); 
+    let spl = descr.split("|"); 
     let myDiv = document.getElementById("lista-desor_" + json[i].id);
   
   for (let j = 0; j < 4; j++) { 
@@ -220,4 +233,4 @@ function listaElementos(json){
   }//for j
 }// for i
 }// function listaElementos
-listaElementos(pruebaJson);
+listaElementos(almacenLocal);

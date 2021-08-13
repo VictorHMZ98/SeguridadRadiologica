@@ -9,17 +9,17 @@ let valid = 0;
 function validateForm(e){//validateForm
     //No ejecutes
     e.preventDefault();
-    let inputProduct = document.getElementById('product');
-    let inputMarca = document.getElementById('marca');
-    let inputModel = document.getElementById('model');
-    let inputDescription = document.getElementById('description');
-    let inputImage = document.getElementById('image');
+    let inputNombre = document.getElementById('nombre');
+    let inputParrafo = document.getElementById('parrafo');
+    let inputParrafo2 = document.getElementById('parrafo2');
+    let inputParrafo3 = document.getElementById('parrafo3');
+    let inputParrafoRes = document.getElementById('parrafoRes');
 
-    console.log(typeof(inputProduct.value))
+    console.log(typeof(inputNombre.value))
     //let inputZipcode = document.getElementById('zipCode')
     
     //console.log(inputNombre.value)
-    console.log(inputProduct.classList)
+    console.log(inputNombre.classList)
 
     function validateName(nombre){//validateName
       //let expReg= /^[A-Z]+$/;
@@ -27,53 +27,62 @@ function validateForm(e){//validateForm
       let esValido = expReg.test(nombre);
       console.log(esValido);
       if(esValido == true){//if nombre
-          inputProduct.classList.remove('is-invalid')
-          inputProduct.classList.add('is-valid')
+          inputNombre.classList.remove('is-invalid')
+          inputNombre.classList.add('is-valid')
           console.log('Hey si es mayor a =0')
           return valid ++;
         }else{
-          inputProduct.classList.add('is-invalid')
+          inputNombre.classList.add('is-invalid')
           console.log('Esta vacío intenta nuevamente');
       }//if nombre
     }//validateName
     
-    validateName(inputProduct.value)
+    validateName(inputNombre.value)
     
-    function validateMarca(marca){//validateMarca
+    function validateParrafo(parrafo){//validateParrafo
       //let expReg= /^[A-Z]+$/;
       let expReg = new RegExp(/^[-a-zA-Z-á-ú-0-9. ]+$/)
-      let esValido2 = expReg.test(marca);
+      let esValido2 = expReg.test(parrafo);
       console.log(esValido2);
       if(esValido2 == true){//if Marca
-          inputMarca.classList.remove('is-invalid')
-          inputMarca.classList.add('is-valid')
+          inputParrafo.classList.remove('is-invalid')
+          inputParrafo.classList.add('is-valid')
           console.log('Hey si es mayor a =0')
           return valid ++;
         }else{
-          inputMarca.classList.add('is-invalid')
+          inputParrafo.classList.add('is-invalid')
           console.log('Esta vacío intenta nuevamente');
       }//if Marca
-    }//validateMarca
+    }//validateParrafo
     
-    validateMarca(inputMarca.value)
+    validateParrafo(inputParrafo.value)
 
-    function validateModel(model){//validateModel
-      //let expReg= /^[A-Z]+$/;
-      let expReg = new RegExp(/^[-a-zA-Z-á-ú-0-9. ]+$/)
-      let esValido3 = expReg.test(model);
-      console.log(esValido3);
-      if(esValido3 == true){//if Model
-          inputModel.classList.remove('is-invalid')
-          inputModel.classList.add('is-valid')
-          console.log('Hey si es mayor a =0')
-          return valid ++;
-        }else{
-          inputModel.classList.add('is-invalid')
-          console.log('Esta vacío intenta nuevamente');
-      }//if Model
-    }//validateModel
-    
-    validateModel(inputModel.value)
+    if(inputParrafo2.value.length != 0 || inputParrafo2.value.length == 0){//if opcional Parrafo2
+      inputParrafo2.classList.remove('is-invalid')
+      inputParrafo2.classList.add('is-valid') 
+      valid++;
+    }else{
+      inputParrafo2.classList.add('is-valid')
+      valid++;
+    }//if opcional Parrafo2
+
+    if(inputParrafo3.value.length != 0 || inputParrafo3.value.length == 0){//if opcional Parrafo3
+      inputParrafo3.classList.remove('is-invalid')
+      inputParrafo3.classList.add('is-valid') 
+      valid++;
+    }else{
+      inputParrafo3.classList.add('is-valid')
+      valid++;
+    }//if opcional Parrafo3
+
+    if(inputParrafoRes.value.length != 0 || inputParrafoRes.value.length == 0){//if opcional ParrafoRes
+      inputParrafoRes.classList.remove('is-invalid')
+      inputParrafoRes.classList.add('is-valid') 
+      valid++;
+    }else{
+      inputParrafoRes.classList.add('is-valid')
+      valid++;
+    }//if opcional ParrafoRes
     
     // if(inputPrice.value.length > 0){//if price
         
@@ -105,27 +114,10 @@ function validateForm(e){//validateForm
     //   img.onload
     // }//ValidateImage
 
-    function validateDescription(description){//validateDescription
-      //let expReg= /^[A-Z]+$/;
-      let expReg = new RegExp(/^[-a-zA-Z-á-ú-0-9.| ]+$/)
-      let esValido4 = expReg.test(description);
-      console.log(esValido4);
-      if(esValido4 == true){//if Description
-          inputDescription.classList.remove('is-invalid')
-          inputDescription.classList.add('is-valid')
-          console.log('Hey si es mayor a =0')
-          return valid ++;
-        }else{
-          inputDescription.classList.add('is-invalid')
-          console.log('Esta vacío intenta nuevamente');
-      }//if Description
-    }//validateDescription
 
-    validateDescription(inputDescription.value)
-
-    if (valid==4){
+    if (valid==5){
       console.log('Done');
-      nuevoProducto();
+      //nuevoProducto();
     }
     return valid = 0;
 }//validateForm
