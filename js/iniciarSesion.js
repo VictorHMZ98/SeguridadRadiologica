@@ -32,7 +32,7 @@ function validateForm(e){//validateForm
     validateEmail(inputEmail.value)
 
     function validatePassword(password){//validatePassword
-      let expReg = new RegExp(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[$@!%?&]).{6,12}$/);
+      let expReg = new RegExp(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[/$@*#!%?&._-]).{6,12}$/);
       let esValido = expReg.test(password);
       console.log(esValido);
       if(esValido == true ){//if email 
@@ -49,8 +49,8 @@ function validateForm(e){//validateForm
     validatePassword(inputContraseña.value)
 
     if (valid==6){
-      window.open('mailto:generation.c2.cdmxe3@gmail.com?subject=Contacto&body=body');
-      window.localStorage("sesionesRegistradas",JSON.stringify())
+      //window.open('mailto:generation.c2.cdmxe3@gmail.com?subject=Contacto&body=body');
+      console.log('Done')
     }
     return vaid = 0;
 }//validateForm
