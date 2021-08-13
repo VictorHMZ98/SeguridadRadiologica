@@ -311,6 +311,7 @@ li{
         justify-content: center;
         text-align: center;
         margin-left: 0;
+        z-index: 8!important;
     }
     .navbar-link-text{
         background-color: white;
@@ -322,7 +323,6 @@ li{
     }
     .nav-item{
         background-color: white!important;
-        z-index: 8!important;
     }
 
     .container-img-bios{
